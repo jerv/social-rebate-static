@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <link rel="stylesheet" href="{% static '/static/css/main.css' %}">
+        <link rel="stylesheet" href="{% static '/static/css/app.css' %}">
         <script src="{% static '/static/js/vendor/modernizr-2.6.2.js' %}"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     </head>
@@ -18,9 +18,14 @@
         <a id="siteId" href="{% url "/index.html" %}">
           <img src="{% static "images/logo.png" %}">
         </a>
-        <section class="user-section">
-          Hello <span>Jeremy</span> <i class="fa fa-chevron-down"></i>
-        </section>
+        <a id="userControl" href="javascript:void(0);">
+          <div class="u-mobile-only">
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="u-desktop-only">
+            Hello <span>Jeremy</span> <i class="fa fa-chevron-down"></i>
+          </div>
+        </a>
       </nav>
       <section id="sideBar">
         <ul>

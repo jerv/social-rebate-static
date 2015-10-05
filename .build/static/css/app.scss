@@ -1,3 +1,26 @@
+$pink : #DB5461 !global;
+$light-grey : #686963 !global;
+$dark-grey : #8AA29E !global;
+
+$primary : $pink !global;
+$secondary : $dark-grey !global;
+$tertiary : $light-grey !global;
+
 @import 'vendor/0-vendor-dir';
 @import 'modules/0-modules-dir';
 
+@media (max-width:991px) {
+	.u-desktop-only {
+		display: none;
+	}
+}
+
+@media (min-width:992px) {
+	.u-mobile-only {
+		display: none;
+	}
+}
+
+a {
+	text-decoration:none !important;
+}
