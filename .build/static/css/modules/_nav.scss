@@ -16,30 +16,31 @@ nav {
 }
 
 i#toggleSideBar {
-	width: $nav-size;
+	width: $nav-size - 4;
 	height: $nav-size;
 	display: block;
 	line-height: $nav-size;
 	text-align: center;
 	cursor: pointer;
-	transition: 0.1s background-color ease-out, 0.1s box-shadow ease-out;
+	transition: 0.1s background-color linear, 0.1s box-shadow linear;
 	box-shadow:-1px 0 rgba(0,0,0,0.1) inset;
 	color: #666;
-	text-decoration: none !important;
-	&:hover {
-		background: #f5f5f5;
-	}
 	&:active  {
 		background-color: #fafafa;
-		box-shadow: -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0,0,0,0.15) inset;
+		box-shadow: -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0,0,0,0.1) inset;
 		color: #888;
 	}
 }
 
-body.active-menu i#toggleSideBar {
-  background-color: #fafafa;
-  box-shadow: -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0,0,0,0.15) inset;
-  color: $pink;
+body.active-toggleSideBar {
+	i#toggleSideBar {
+	  background-color: #fafafa;
+	  box-shadow: -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0,0,0,0.1) inset;
+		color: $pink;
+	}
+	#sideBar {
+		left: 0;
+	}
 }
 
 .off-screen-menu {
@@ -52,11 +53,12 @@ body.active-menu i#toggleSideBar {
 	box-shadow: -1px 0 rgba(0,0,0,0.2), 2px 0 6px rgba(0,0,0,0.2);
 	background-color: #f5f5f5;
 	z-index: 9001;
+	transition:0.1s all linear;
 }
 
 #sideBar {
 	@extend .off-screen-menu;
-	left: 0; // CHANGE
+	left: -100%; // CHANGE
 	ul {
 		margin:0;
 		padding: 0;
@@ -108,17 +110,26 @@ body.active-menu i#toggleSideBar {
 	top:0;
 	line-height: $nav-size;
 	.u-mobile-only i {
-		@extend #toggleSideBar;
+		width: $nav-size;
+		height: $nav-size;
+		display: block;
+		line-height: $nav-size;
+		text-align: center;
+		transition: 0.1s background-color linear, 0.1s box-shadow linear;
+		color: #666;
 		right: 0;
-		left: auto;
 		box-shadow:1px 0 rgba(0,0,0,0.1) inset;
-		&:active, &.active {
-			box-shadow:1px 0 rgba(0,0,0,0.2) inset;
+		&:active  {
+			background-color: #fafafa;
+			box-shadow: 1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0,0,0,0.1) inset;
+			color: #888;
 		}
 	}
 }
-body.active-user-menu #userControl .u-mobile-only i {
-	background-color: #fafafa;
-	box-shadow: -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0,0,0,0.15) inset;
-	color: $pink;
+body.active-userControl {
+	#userControl .u-mobile-only i {
+		background-color: #fafafa;
+		box-shadow: 1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0,0,0,0.1) inset;
+		color: $pink;
+	}
 }
