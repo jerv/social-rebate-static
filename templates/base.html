@@ -29,7 +29,13 @@
       </nav>
       <section id="sideBar">
         <ul>
-          <li class="{% if_current_page '/index.html' 'active' '' %}"><a href="{% url '/index.html' %}">Home</a></li>
+          <li><a class="{% if_current_page '/index.html' 'active' '' %}" href="{% url '/index.html' %}">Home</a></li>
+        </ul>
+        <ul>
+          <li><a href="javacsript:void(0);">Store Settings</a></li>
+        </ul>
+        <ul>
+          <li><a href="javacsript:void(0);">Help</a></li>
         </ul>
       </section>
 
