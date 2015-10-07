@@ -48,6 +48,8 @@ nav {
         font-weight:bold;
         padding: 0 15px;
         line-height: 45px;
+        border-bottom:1px solid #ddd;
+        background-color: #fafafa;
       }
     }
     a {
@@ -89,6 +91,9 @@ body.active-toggleNav {
     background-color: #fafafa;
     box-shadow: -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0, 0, 0, 0.1) inset;
     color: $pink;
+    &:before {
+      content:"\e122";
+    }
   }
   #navSideBar {
     left: 0;
@@ -131,6 +136,26 @@ body.active-toggleNav {
       color: #888;
     }
   }
+  .u-desktop-only {
+    line-height: $nav-size;
+    color: #777;
+    font-size: 14px;
+    padding:0 15px 0 10px;
+    @extend .nav-button;
+    width: auto;
+    i {
+      font-size: 1.4em;
+    }
+    &:hover {
+      color: #333; 
+    }
+    box-shadow: 1px 0 rgba(0, 0, 0, 0.1) inset, -1px 0 rgba(0, 0, 0, 0.1) inset;
+    &:active {
+      background-color: #fafafa;
+      box-shadow: 1px 0 rgba(0, 0, 0, 0.2) inset, -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0, 0, 0, 0.1) inset;
+      color: #888;
+    }
+  }
 }
 #userSideBar {
   @extend .side-element;
@@ -143,6 +168,14 @@ body.active-userControl {
     box-shadow: 1px 0 rgba(0, 0, 0, 0.2) inset, -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0, 0, 0, 0.1) inset;
     color: $pink;
     &:before {
+      content: "\e12c";
+    }
+  }
+  #userControl .u-desktop-only {
+    background-color: #fafafa;
+    box-shadow: 1px 0 rgba(0, 0, 0, 0.2) inset, -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0, 0, 0, 0.1) inset;
+    color: $pink;
+    i:before {
       content: "\e12c";
     }
   }
@@ -183,6 +216,9 @@ body.active-userControl {
     position: relative;
     overflow:hidden;
     transition: 0.2s all linear;
+    &:first-of-type {
+      margin-top: 15px;
+    }
     &:hover {
       box-shadow:0 2px 6px rgba(0,0,0,0.2);
       h5 {
@@ -226,6 +262,9 @@ body.active-toggleNotifications {
     color: $pink;
   }
   #userControl .u-mobile-only i {
+    box-shadow: 1px 0 rgba(0, 0, 0, 0.1) inset, -1px 0 rgba(0, 0, 0, 0.2) inset;
+  }
+  #userControl .u-desktop-only {
     box-shadow: 1px 0 rgba(0, 0, 0, 0.1) inset, -1px 0 rgba(0, 0, 0, 0.2) inset;
   }
   #notificationsSideBar {
