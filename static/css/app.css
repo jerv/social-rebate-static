@@ -2327,7 +2327,9 @@ nav {
   display: block;
   background-color: #f5f5f5;
   z-index: 9001;
-  transition: 0.1s all linear; }
+  transition: 0.1s all linear;
+  overflow-y: scroll;
+  padding-bottom: 50px; }
   .side-element ul, #navSideBar ul, #userSideBar ul, #notificationsSideBar ul {
     margin: 0;
     padding: 0;
@@ -2350,12 +2352,25 @@ nav {
       padding: 0 15px;
       line-height: 45px;
       color: #444;
-      font-size: 14px; }
+      font-size: 14px;
+      transition: 0.1s background-color ease-out; }
       .side-element ul a.active, #navSideBar ul a.active, #userSideBar ul a.active, #notificationsSideBar ul a.active {
         background-color: #DB5461;
         color: #fff; }
-      .side-element ul a:active, #navSideBar ul a:active, #userSideBar ul a:active, #notificationsSideBar ul a:active {
+        .side-element ul a.active:hover, #navSideBar ul a.active:hover, #userSideBar ul a.active:hover, #notificationsSideBar ul a.active:hover {
+          background-color: #df6571; }
+        .side-element ul a.active i, #navSideBar ul a.active i, #userSideBar ul a.active i, #notificationsSideBar ul a.active i {
+          color: #eda8af; }
+      .side-element ul a:hover, #navSideBar ul a:hover, #userSideBar ul a:hover, #notificationsSideBar ul a:hover {
         background-color: #fafafa; }
+      .side-element ul a:active, #navSideBar ul a:active, #userSideBar ul a:active, #notificationsSideBar ul a:active {
+        background-color: #fff; }
+        .side-element ul a:active i, #navSideBar ul a:active i, #userSideBar ul a:active i, #notificationsSideBar ul a:active i {
+          color: #DB5461; }
+      .side-element ul a i, #navSideBar ul a i, #userSideBar ul a i, #notificationsSideBar ul a i {
+        font-size: 1.6em;
+        padding: 0 10px 0 0;
+        color: #bbb; }
 
 i#toggleNav {
   box-shadow: -1px 0 rgba(0, 0, 0, 0.1) inset; }
@@ -2509,6 +2524,62 @@ body.active-toggleNotifications #userControl .u-desktop-only {
 body.active-toggleNotifications #notificationsSideBar {
   right: 0; }
 
+[class|="margin"] {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.margin-none {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.margin-xs {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.margin-sm {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.margin-md {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.margin-lg {
+  margin-top: 60px;
+  margin-bottom: 60px; }
+
+.margin-xl {
+  margin-top: 80px;
+  margin-bottom: 80px; }
+
+[class|="padding"] {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.padding-none {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.padding-xs {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.padding-sm {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.padding-md {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.padding-lg {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.padding-xl {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
 @media (max-width: 640px) {
   .u-desktop-only {
     display: none !important; }
@@ -2523,5 +2594,11 @@ body.active-toggleNotifications #notificationsSideBar {
     display: block !important; } }
 a {
   text-decoration: none !important; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Raleway', sans-serif; }
 
 /*# sourceMappingURL=app.css.map */

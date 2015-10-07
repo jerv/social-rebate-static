@@ -36,6 +36,8 @@ nav {
   background-color: #f5f5f5;
   z-index: 9001;
   transition: 0.1s all linear;
+  overflow-y: scroll;
+  padding-bottom: $nav-size + 5;
   ul {
     margin: 0;
     padding: 0;
@@ -61,12 +63,30 @@ nav {
       line-height: 45px;
       color: #444;
       font-size: 14px;
+      transition: 0.1s background-color ease-out;
       &.active {
         background-color: $primary;
         color: #fff;
+        &:hover {
+          background-color: lighten($primary, 4);
+        }
+        i {
+          color: lighten($primary, 20);
+        }
+      }
+      &:hover {
+        background-color: #fafafa;
       }
       &:active {
-        background-color: #fafafa;
+        background-color: #fff;
+        i {
+          color: $primary;
+        }
+      }
+      i {
+        font-size: 1.6em;
+        padding: 0 10px 0 0;
+        color: #bbb;
       }
     }
   }

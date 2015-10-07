@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="{% static '/static/fonts/typicons.css' %}">
         <script src="{% static '/static/js/vendor/modernizr-2.6.2.js' %}"></script>
 
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,100,400italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+
         <link rel="shortcut icon" type="image/x-icon" href="{% static "images/favicon.ico" %}">
     </head>
 
@@ -32,18 +35,20 @@
       </nav>
       <section id="navSideBar">
         <ul>
-          <li><a class="{% if_current_page '/index.html' 'active' '' %}" href="{% url '/index.html' %}">Home</a></li>
-          <li><a href="javacsript:void(0);">Store Settings</a></li>
-          <li><a href="javacsript:void(0);">Help</a></li>
+          <li><a href="javacsript:void(0);"><i class="typcn typcn-plus"></i> New Rebate</a></li>  
+          <li><a class="{% if_current_page '/index.html' 'active' '' %}" href="{% url '/index.html' %}"><i class="typcn typcn-tags"></i> My Rebates</a></li>
+          <li><a href="javacsript:void(0);"><i class="typcn typcn-chart-line"></i> Analytics</a></li>        
+          <li><a href="javacsript:void(0);"><i class="typcn typcn-cog"></i> Store Settings</a></li>
+          <li><a href="javacsript:void(0);"><i class="typcn typcn-directions"></i> Help Center</a></li>
         </ul>
       </section>
 
       <section id="userSideBar">
         <ul>
           <li class="heading">My Account</li>
-          <li><a href="javacsript:void(0);">Profile Settings</a></li>
-          <li><a href="javacsript:void(0);">Payment Settings</a></li>
-          <li><a href="javacsript:void(0);">Sign out</a></li>
+          <li><a href="javacsript:void(0);"><i class="typcn typcn-user-outline"></i> Profile Settings</a></li>
+          <li><a href="javacsript:void(0);"><i class="typcn typcn-credit-card"></i> Payment Settings</a></li>
+          <li><a href="javacsript:void(0);"><i class="typcn typcn-eject"></i> Sign out</a></li>
         </ul>
       </section>
 
