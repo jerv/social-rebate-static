@@ -9,15 +9,21 @@ $tertiary : $light-grey !global;
 @import 'vendor/0-vendor-dir';
 @import 'modules/0-modules-dir';
 
-@media (max-width:991px) {
+@media (max-width:640px) {
 	.u-desktop-only {
-		display: none;
+		display: none !important;
+	}
+	.u-mobile-only {
+		display: block !important;
 	}
 }
 
-@media (min-width:992px) {
+@media (min-width:641px) {
 	.u-mobile-only {
-		display: none;
+		display: none !important;
+	}
+	.u-desktop-only {
+		display: block !important;
 	}
 }
 
