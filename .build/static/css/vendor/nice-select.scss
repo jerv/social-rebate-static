@@ -1,16 +1,16 @@
 // Default variables
-$font_size: 0.8em !default;
+$font_size: 14px !default;
 $font_size_small: 12px !default;
 
-$input_border_radius: 3px !default;
-$input_height: 36px !default;
+$input_border_radius: 5px !default;
+$input_height: 42px !default;
 $input_height_small: 36px !default;
-$dropdown_padding: 10px !default;
+$dropdown_padding: 18px !default;
 
 $gray_dark: #444 !default;
 $gray: #999 !default;
-$gray_light: #D1D1D1 !default;
-$gray_lighter: #fafafa !default;
+$gray_light: #e8e8e8 !default;
+$gray_lighter: #f6f6f6 !default;
 $primary_light: $gray !default;
 $arrow_color: $gray !default;
 
@@ -29,8 +29,8 @@ select {
   box-sizing: border-box;
   clear: both;
   cursor: pointer;
-  display: inline-block;
-  // float: left;
+  display: block;
+  float: left;
   font-family: inherit;
   font-size: $font_size;
   font-weight: normal;
@@ -38,14 +38,13 @@ select {
   line-height: $input_height - 2;
   outline: none;
   padding-left: $dropdown_padding;
-  padding-right: $dropdown_padding + 18;
+  padding-right: $dropdown_padding + 12;
   position: relative;
   text-align: left !important;
   transition: all 0.2s ease-in-out;
   user-select: none;
   white-space: nowrap;
-  width: 100%;
-  margin: 0 0 20px 0;
+  width: auto;
   &:hover {
     border-color: darken($gray_light, 5%);
   }
@@ -58,7 +57,7 @@ select {
     border-right: 2px solid $arrow_color;
     content: '';
     display: block; 
-    height: 7px;
+    height: 5px;
     margin-top: -4px;
     pointer-events: none;
     position: absolute; 
@@ -67,7 +66,7 @@ select {
     transform-origin: 66% 66%;
     transform: rotate(45deg);
     transition: all 0.15s ease-in-out;
-    width: 7px;
+    width: 5px;
   }
   
   &.open {
@@ -90,14 +89,42 @@ select {
     }
   }
   
+  // Modifiers
+  &.wide {
+    width: 100%;
+    .list {
+      left: 0 !important;
+      right: 0 !important;
+    }
+  }
+  &.right {
+    float: right;
+    .list {
+      left: auto;
+      right: 0;
+    }
+  }
+  &.small {
+    font-size: $font_size_small;
+    height: $input_height_small;
+    line-height: $input_height_small - 2;
+    &:after { 
+      height: 4px;
+      width: 4px;
+    }
+    .option {
+      line-height: $input_height_small - 2;
+      min-height: $input_height_small - 2;
+    }
+  }
+  
   // List and options
   .list {
     background-color: #fff;
     border-radius: $input_border_radius;
-    box-shadow: 0 0 0 1px rgba($gray_dark, .2), 0 5px 9px rgba(0,0,0,0.2);
+    box-shadow: 0 0 0 1px rgba($gray_dark, .11);
     box-sizing: border-box;
-    margin-top: 6px;
-    width: 100%;
+    margin-top: 4px;
     opacity: 0;
     overflow: hidden;
     padding: 0;
