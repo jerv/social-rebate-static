@@ -1,41 +1,281 @@
-$pink : #DB5461 !global;
-$light-grey : #686963 !global;
-$dark-grey : #8AA29E !global;
-
-$primary : $pink !global;
-$secondary : $dark-grey !global;
-$tertiary : $light-grey !global;
+$pink: #DB5461 !global;
+$light-grey: #686963 !global;
+$dark-grey: #8AA29E !global;
+$primary: $pink !global;
+$secondary: $dark-grey !global;
+$tertiary: $light-grey !global;
 
 @import 'vendor/0-vendor-dir';
 @import 'modules/0-modules-dir';
 @import 'utilities/0-utilities-dir';
 
 @media (max-width:640px) {
-	.u-desktop-only {
-		display: none !important;
-	}
-	.u-mobile-only {
-		display: block !important;
-	}
+  .u-desktop-only {
+    display: none !important;
+  }
+  .u-mobile-only {
+    display: block !important;
+  }
 }
 
 @media (min-width:641px) {
-	.u-mobile-only {
-		display: none !important;
-	}
-	.u-desktop-only {
-		display: block !important;
-	}
+  .u-mobile-only {
+    display: none !important;
+  }
+  .u-desktop-only {
+    display: block !important;
+  }
+}
+
+.u-txt-align-right {
+  text-align: right;
+}
+
+.u-txt-align-center {
+  text-align: center;
+}
+
+.u-txt-align-left {
+  text-align: left;
 }
 
 a {
-	text-decoration:none !important;
+  text-decoration: none !important;
+  &.text-link {
+  	font-size: 0.8em;
+  	text-transform: uppercase;
+  	color: $primary;
+  	&:hover {
+  		color: darken($primary, 12);
+  	}
+  }
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-	font-family: 'Raleway', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 0 15px 0;
+}
+
+p {
+  font-size: 1em;
+  &.heading {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 1.8em;
+    &.small {
+      font-size: 1.2em;
+    }
+  }
+}
+
+label {
+  font-size: 0.85em;
+  color: #777;
+  text-transform: uppercase;
+  display: block;
+}
+
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  padding: 0 15px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  transition: all 0.2s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 -2px rgba(0, 0, 0, 0.11) inset;
+  background-color: $secondary;
+}
+
+input[type="reset"] {
+  background-color: $tertiary;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #fff;
+  outline: 0;
+  background-color: lighten($secondary, 5);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), 0 -3px rgba(0, 0, 0, 0.15) inset;;
+}
+
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px rgba(0, 0, 0, 0.1) inset;;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  background-color: $primary;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  background-color: lighten($primary, 5);
+}
+
+.button.button-secondary,
+button.button-secondary,
+input[type="submit"].button-secondary,
+input[type="reset"].button-secondary,
+input[type="button"].button-secondary {
+  background-color: $tertiary;
+}
+
+.button.button-secondary:hover,
+button.button-secondary:hover,
+input[type="submit"].button-secondary:hover,
+input[type="reset"].button-secondary:hover,
+input[type="button"].button-secondary:hover,
+.button.button-secondary:focus,
+button.button-secondary:focus,
+input[type="submit"].button-secondary:focus,
+input[type="reset"].button-secondary:focus,
+input[type="button"].button-secondary:focus {
+  background-color: lighten($tertiary, 5);
+}
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea, {
+  padding: 8px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 3px;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  margin: 5px 0 15px 0;
+  max-width: 100%;
+  max-height: 850px;
+  font-size: 0.8em;
+  transition: border-color 0.2s ease-out;
+}
+
+
+/* Removes awkward default styles on some inputs for iOS */
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  min-height: 120px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border: 1px solid #999;
+  outline: 0;
+}
+
+input[type="email"].error,
+input[type="number"].error,
+input[type="search"].error,
+input[type="text"].error,
+input[type="tel"].error,
+input[type="url"].error,
+input[type="password"].error,
+.nice-select.error {
+  border: 1px solid $primary;
+  color: $primary;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+}
+
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal;
 }
