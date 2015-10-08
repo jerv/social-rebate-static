@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -38,7 +39,7 @@ audio:not([controls]) {
 a {
   background-color: transparent; }
 
-a:active, a:hover {
+a:active, a.nice-select.open, a:hover {
   outline: 0; }
 
 abbr[title] {
@@ -245,7 +246,7 @@ hr {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-.sr-only-focusable:active, .sr-only-focusable:focus {
+.sr-only-focusable:active, .sr-only-focusable.nice-select.open, .sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;
@@ -1711,7 +1712,7 @@ textarea.input-lg, select[multiple].input-lg {
   -ms-user-select: none;
   user-select: none; }
 
-.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+.btn:focus, .btn:active:focus, .btn.nice-select.open:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.focus.nice-select.open, .btn.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
@@ -1720,7 +1721,7 @@ textarea.input-lg, select[multiple].input-lg {
   color: #333;
   text-decoration: none; }
 
-.btn:active, .btn.active {
+.btn:active, .btn.nice-select.open, .btn.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -1751,20 +1752,20 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #e6e6e6;
   border-color: #adadad; }
 
-.btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+.btn-default:active, .btn-default.nice-select.open, .btn-default.active, .open > .dropdown-toggle.btn-default {
   color: #333;
   background-color: #e6e6e6;
   border-color: #adadad; }
 
-.btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+.btn-default:active:hover, .btn-default.nice-select.open:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.nice-select.open:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.focus.nice-select.open, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
   color: #333;
   background-color: #d4d4d4;
   border-color: #8c8c8c; }
 
-.btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+.btn-default:active, .btn-default.nice-select.open, .btn-default.active, .open > .dropdown-toggle.btn-default {
   background-image: none; }
 
-.btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled.focus, .btn-default[disabled].focus, fieldset[disabled] .btn-default.focus, .btn-default.disabled:active, .btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active {
+.btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled.focus, .btn-default[disabled].focus, fieldset[disabled] .btn-default.focus, .btn-default.disabled:active, .btn-default.disabled.nice-select.open, .btn-default[disabled]:active, .btn-default[disabled].nice-select.open, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.nice-select.open, .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active {
   background-color: #fff;
   border-color: #ccc; }
 
@@ -1787,20 +1788,20 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #286090;
   border-color: #204d74; }
 
-.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+.btn-primary:active, .btn-primary.nice-select.open, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   color: #fff;
   background-color: #286090;
   border-color: #204d74; }
 
-.btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus {
+.btn-primary:active:hover, .btn-primary.nice-select.open:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.nice-select.open:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.focus.nice-select.open, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus {
   color: #fff;
   background-color: #204d74;
   border-color: #122b40; }
 
-.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+.btn-primary:active, .btn-primary.nice-select.open, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
   background-image: none; }
 
-.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary.disabled.nice-select.open, .btn-primary[disabled]:active, .btn-primary[disabled].nice-select.open, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.nice-select.open, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
   background-color: #337ab7;
   border-color: #2e6da4; }
 
@@ -1823,20 +1824,20 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #449d44;
   border-color: #398439; }
 
-.btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success {
+.btn-success:active, .btn-success.nice-select.open, .btn-success.active, .open > .dropdown-toggle.btn-success {
   color: #fff;
   background-color: #449d44;
   border-color: #398439; }
 
-.btn-success:active:hover, .btn-success.active:hover, .open > .dropdown-toggle.btn-success:hover, .btn-success:active:focus, .btn-success.active:focus, .open > .dropdown-toggle.btn-success:focus, .btn-success:active.focus, .btn-success.active.focus, .open > .dropdown-toggle.btn-success.focus {
+.btn-success:active:hover, .btn-success.nice-select.open:hover, .btn-success.active:hover, .open > .dropdown-toggle.btn-success:hover, .btn-success:active:focus, .btn-success.nice-select.open:focus, .btn-success.active:focus, .open > .dropdown-toggle.btn-success:focus, .btn-success:active.focus, .btn-success.focus.nice-select.open, .btn-success.active.focus, .open > .dropdown-toggle.btn-success.focus {
   color: #fff;
   background-color: #398439;
   border-color: #255625; }
 
-.btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success {
+.btn-success:active, .btn-success.nice-select.open, .btn-success.active, .open > .dropdown-toggle.btn-success {
   background-image: none; }
 
-.btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled.focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success.focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active {
+.btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled.focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success.focus, .btn-success.disabled:active, .btn-success.disabled.nice-select.open, .btn-success[disabled]:active, .btn-success[disabled].nice-select.open, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.nice-select.open, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active {
   background-color: #5cb85c;
   border-color: #4cae4c; }
 
@@ -1859,20 +1860,20 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #31b0d5;
   border-color: #269abc; }
 
-.btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+.btn-info:active, .btn-info.nice-select.open, .btn-info.active, .open > .dropdown-toggle.btn-info {
   color: #fff;
   background-color: #31b0d5;
   border-color: #269abc; }
 
-.btn-info:active:hover, .btn-info.active:hover, .open > .dropdown-toggle.btn-info:hover, .btn-info:active:focus, .btn-info.active:focus, .open > .dropdown-toggle.btn-info:focus, .btn-info:active.focus, .btn-info.active.focus, .open > .dropdown-toggle.btn-info.focus {
+.btn-info:active:hover, .btn-info.nice-select.open:hover, .btn-info.active:hover, .open > .dropdown-toggle.btn-info:hover, .btn-info:active:focus, .btn-info.nice-select.open:focus, .btn-info.active:focus, .open > .dropdown-toggle.btn-info:focus, .btn-info:active.focus, .btn-info.focus.nice-select.open, .btn-info.active.focus, .open > .dropdown-toggle.btn-info.focus {
   color: #fff;
   background-color: #269abc;
   border-color: #1b6d85; }
 
-.btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+.btn-info:active, .btn-info.nice-select.open, .btn-info.active, .open > .dropdown-toggle.btn-info {
   background-image: none; }
 
-.btn-info.disabled, .btn-info[disabled], fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled.focus, .btn-info[disabled].focus, fieldset[disabled] .btn-info.focus, .btn-info.disabled:active, .btn-info[disabled]:active, fieldset[disabled] .btn-info:active, .btn-info.disabled.active, .btn-info[disabled].active, fieldset[disabled] .btn-info.active {
+.btn-info.disabled, .btn-info[disabled], fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled.focus, .btn-info[disabled].focus, fieldset[disabled] .btn-info.focus, .btn-info.disabled:active, .btn-info.disabled.nice-select.open, .btn-info[disabled]:active, .btn-info[disabled].nice-select.open, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.nice-select.open, .btn-info.disabled.active, .btn-info[disabled].active, fieldset[disabled] .btn-info.active {
   background-color: #5bc0de;
   border-color: #46b8da; }
 
@@ -1895,20 +1896,20 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #ec971f;
   border-color: #d58512; }
 
-.btn-warning:active, .btn-warning.active, .open > .dropdown-toggle.btn-warning {
+.btn-warning:active, .btn-warning.nice-select.open, .btn-warning.active, .open > .dropdown-toggle.btn-warning {
   color: #fff;
   background-color: #ec971f;
   border-color: #d58512; }
 
-.btn-warning:active:hover, .btn-warning.active:hover, .open > .dropdown-toggle.btn-warning:hover, .btn-warning:active:focus, .btn-warning.active:focus, .open > .dropdown-toggle.btn-warning:focus, .btn-warning:active.focus, .btn-warning.active.focus, .open > .dropdown-toggle.btn-warning.focus {
+.btn-warning:active:hover, .btn-warning.nice-select.open:hover, .btn-warning.active:hover, .open > .dropdown-toggle.btn-warning:hover, .btn-warning:active:focus, .btn-warning.nice-select.open:focus, .btn-warning.active:focus, .open > .dropdown-toggle.btn-warning:focus, .btn-warning:active.focus, .btn-warning.focus.nice-select.open, .btn-warning.active.focus, .open > .dropdown-toggle.btn-warning.focus {
   color: #fff;
   background-color: #d58512;
   border-color: #985f0d; }
 
-.btn-warning:active, .btn-warning.active, .open > .dropdown-toggle.btn-warning {
+.btn-warning:active, .btn-warning.nice-select.open, .btn-warning.active, .open > .dropdown-toggle.btn-warning {
   background-image: none; }
 
-.btn-warning.disabled, .btn-warning[disabled], fieldset[disabled] .btn-warning, .btn-warning.disabled:hover, .btn-warning[disabled]:hover, fieldset[disabled] .btn-warning:hover, .btn-warning.disabled:focus, .btn-warning[disabled]:focus, fieldset[disabled] .btn-warning:focus, .btn-warning.disabled.focus, .btn-warning[disabled].focus, fieldset[disabled] .btn-warning.focus, .btn-warning.disabled:active, .btn-warning[disabled]:active, fieldset[disabled] .btn-warning:active, .btn-warning.disabled.active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning.active {
+.btn-warning.disabled, .btn-warning[disabled], fieldset[disabled] .btn-warning, .btn-warning.disabled:hover, .btn-warning[disabled]:hover, fieldset[disabled] .btn-warning:hover, .btn-warning.disabled:focus, .btn-warning[disabled]:focus, fieldset[disabled] .btn-warning:focus, .btn-warning.disabled.focus, .btn-warning[disabled].focus, fieldset[disabled] .btn-warning.focus, .btn-warning.disabled:active, .btn-warning.disabled.nice-select.open, .btn-warning[disabled]:active, .btn-warning[disabled].nice-select.open, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.nice-select.open, .btn-warning.disabled.active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning.active {
   background-color: #f0ad4e;
   border-color: #eea236; }
 
@@ -1931,20 +1932,20 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #c9302c;
   border-color: #ac2925; }
 
-.btn-danger:active, .btn-danger.active, .open > .dropdown-toggle.btn-danger {
+.btn-danger:active, .btn-danger.nice-select.open, .btn-danger.active, .open > .dropdown-toggle.btn-danger {
   color: #fff;
   background-color: #c9302c;
   border-color: #ac2925; }
 
-.btn-danger:active:hover, .btn-danger.active:hover, .open > .dropdown-toggle.btn-danger:hover, .btn-danger:active:focus, .btn-danger.active:focus, .open > .dropdown-toggle.btn-danger:focus, .btn-danger:active.focus, .btn-danger.active.focus, .open > .dropdown-toggle.btn-danger.focus {
+.btn-danger:active:hover, .btn-danger.nice-select.open:hover, .btn-danger.active:hover, .open > .dropdown-toggle.btn-danger:hover, .btn-danger:active:focus, .btn-danger.nice-select.open:focus, .btn-danger.active:focus, .open > .dropdown-toggle.btn-danger:focus, .btn-danger:active.focus, .btn-danger.focus.nice-select.open, .btn-danger.active.focus, .open > .dropdown-toggle.btn-danger.focus {
   color: #fff;
   background-color: #ac2925;
   border-color: #761c19; }
 
-.btn-danger:active, .btn-danger.active, .open > .dropdown-toggle.btn-danger {
+.btn-danger:active, .btn-danger.nice-select.open, .btn-danger.active, .open > .dropdown-toggle.btn-danger {
   background-image: none; }
 
-.btn-danger.disabled, .btn-danger[disabled], fieldset[disabled] .btn-danger, .btn-danger.disabled:hover, .btn-danger[disabled]:hover, fieldset[disabled] .btn-danger:hover, .btn-danger.disabled:focus, .btn-danger[disabled]:focus, fieldset[disabled] .btn-danger:focus, .btn-danger.disabled.focus, .btn-danger[disabled].focus, fieldset[disabled] .btn-danger.focus, .btn-danger.disabled:active, .btn-danger[disabled]:active, fieldset[disabled] .btn-danger:active, .btn-danger.disabled.active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger.active {
+.btn-danger.disabled, .btn-danger[disabled], fieldset[disabled] .btn-danger, .btn-danger.disabled:hover, .btn-danger[disabled]:hover, fieldset[disabled] .btn-danger:hover, .btn-danger.disabled:focus, .btn-danger[disabled]:focus, fieldset[disabled] .btn-danger:focus, .btn-danger.disabled.focus, .btn-danger[disabled].focus, fieldset[disabled] .btn-danger.focus, .btn-danger.disabled:active, .btn-danger.disabled.nice-select.open, .btn-danger[disabled]:active, .btn-danger[disabled].nice-select.open, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.nice-select.open, .btn-danger.disabled.active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger.active {
   background-color: #d9534f;
   border-color: #d43f3a; }
 
@@ -1957,12 +1958,12 @@ a.btn.disabled, fieldset[disabled] a.btn {
   font-weight: normal;
   border-radius: 0; }
 
-.btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link {
+.btn-link, .btn-link:active, .btn-link.nice-select.open, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.nice-select.open {
   border-color: transparent; }
 
 .btn-link:hover, .btn-link:focus {
@@ -2294,6 +2295,100 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .affix {
   position: fixed; }
 
+select {
+  display: none; }
+
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 3px;
+  border: solid 1px #D1D1D1;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.8em;
+  font-weight: normal;
+  height: 36px;
+  line-height: 34px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 28px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0 0 15px 0; }
+  .nice-select:hover {
+    border-color: #c4c4c4; }
+  .nice-select:active, .nice-select.open, .nice-select:focus {
+    border-color: #999; }
+  .nice-select:after {
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+    content: '';
+    display: block;
+    height: 7px;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    transition: all 0.15s ease-in-out;
+    width: 7px; }
+  .nice-select.open:after {
+    transform: rotate(-135deg); }
+  .nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0); }
+  .nice-select.disabled {
+    border-color: #d6d6d6;
+    color: #999;
+    pointer-events: none; }
+    .nice-select.disabled:after {
+      border-color: #cccccc; }
+  .nice-select .list {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.2), 0 5px 9px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    margin-top: 6px;
+    width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scale(0.75) translateY(-18px);
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    z-index: 9; }
+    .nice-select .list:hover .option:not(:hover) {
+      background-color: transparent !important; }
+  .nice-select .option {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 34px;
+    list-style: none;
+    min-height: 34px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 21px;
+    text-align: left;
+    transition: all 0.2s; }
+    .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+      background-color: #fafafa; }
+    .nice-select .option.selected {
+      font-weight: bold; }
+
 body {
   margin-top: 45px; }
 
@@ -2349,7 +2444,7 @@ nav {
       width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
-      padding: 0 15px;
+      padding: 0 12px;
       line-height: 45px;
       color: #444;
       font-size: 14px;
@@ -2363,9 +2458,9 @@ nav {
           color: #eda8af; }
       .side-element ul a:hover, #navSideBar ul a:hover, #userSideBar ul a:hover, #notificationsSideBar ul a:hover {
         background-color: #fafafa; }
-      .side-element ul a:active, #navSideBar ul a:active, #userSideBar ul a:active, #notificationsSideBar ul a:active {
+      .side-element ul a:active, #navSideBar ul a:active, #userSideBar ul a:active, #notificationsSideBar ul a:active, .side-element ul a.nice-select.open, #navSideBar ul a.nice-select.open, #userSideBar ul a.nice-select.open, #notificationsSideBar ul a.nice-select.open {
         background-color: #fff; }
-        .side-element ul a:active i, #navSideBar ul a:active i, #userSideBar ul a:active i, #notificationsSideBar ul a:active i {
+        .side-element ul a:active i, #navSideBar ul a:active i, #userSideBar ul a:active i, #notificationsSideBar ul a:active i, .side-element ul a.nice-select.open i, #navSideBar ul a.nice-select.open i, #userSideBar ul a.nice-select.open i, #notificationsSideBar ul a.nice-select.open i {
           color: #DB5461; }
       .side-element ul a i, #navSideBar ul a i, #userSideBar ul a i, #notificationsSideBar ul a i {
         font-size: 1.6em;
@@ -2374,7 +2469,7 @@ nav {
 
 i#toggleNav {
   box-shadow: -1px 0 rgba(0, 0, 0, 0.1) inset; }
-  i#toggleNav:active {
+  i#toggleNav:active, i#toggleNav.nice-select.open {
     background-color: #fafafa;
     box-shadow: -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0, 0, 0, 0.1) inset;
     color: #888; }
@@ -2418,7 +2513,7 @@ body.active-toggleNav #navSideBar {
   #userControl .u-mobile-only i {
     right: 0;
     box-shadow: 1px 0 rgba(0, 0, 0, 0.1) inset, -1px 0 rgba(0, 0, 0, 0.1) inset; }
-    #userControl .u-mobile-only i:active {
+    #userControl .u-mobile-only i:active, #userControl .u-mobile-only i.nice-select.open {
       background-color: #fafafa;
       box-shadow: 1px 0 rgba(0, 0, 0, 0.2) inset, -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0, 0, 0, 0.1) inset;
       color: #888; }
@@ -2433,7 +2528,7 @@ body.active-toggleNav #navSideBar {
       font-size: 1.4em; }
     #userControl .u-desktop-only:hover {
       color: #333; }
-    #userControl .u-desktop-only:active {
+    #userControl .u-desktop-only:active, #userControl .u-desktop-only.nice-select.open {
       background-color: #fafafa;
       box-shadow: 1px 0 rgba(0, 0, 0, 0.2) inset, -1px 0 rgba(0, 0, 0, 0.2) inset, 0 3px rgba(0, 0, 0, 0.1) inset;
       color: #888; }
@@ -2461,7 +2556,7 @@ body.active-userControl #userSideBar {
   position: absolute;
   right: 0;
   top: 0; }
-  #toggleNotifications:active {
+  #toggleNotifications:active, #toggleNotifications.nice-select.open {
     background-color: #fafafa;
     box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
     color: #888; }
@@ -2496,7 +2591,8 @@ body.active-userControl #userSideBar {
       text-transform: uppercase;
       font-weight: bold;
       margin: 0 0 5px 0;
-      color: #777; }
+      color: #777;
+      font-family: "Roboto", sans-serif; }
       #notificationsSideBar > a h5 i {
         color: #DB5461;
         font-size: 16px; }
@@ -2592,13 +2688,226 @@ body.active-toggleNotifications #notificationsSideBar {
 
   .u-desktop-only {
     display: block !important; } }
+.u-txt-align-right {
+  text-align: right; }
+
+.u-txt-align-center {
+  text-align: center; }
+
+.u-txt-align-left {
+  text-align: left; }
+
 a {
   text-decoration: none !important; }
+  a.text-link {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #DB5461; }
+    a.text-link:hover {
+      color: #c82a39; }
 
 body {
   font-family: 'Roboto', sans-serif; }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Raleway', sans-serif; }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 0 15px 0; }
+
+p {
+  font-size: 1em; }
+  p.heading {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 1.8em; }
+    p.heading.small {
+      font-size: 1.2em; }
+
+label {
+  font-size: 0.85em;
+  color: #777;
+  text-transform: uppercase;
+  display: block; }
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  padding: 0 15px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  transition: all 0.2s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 -2px rgba(0, 0, 0, 0.11) inset;
+  background-color: #8AA29E; }
+
+input[type="reset"] {
+  background-color: #686963; }
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #fff;
+  outline: 0;
+  background-color: #98adaa;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), 0 -3px rgba(0, 0, 0, 0.15) inset; }
+
+.button:active, .button.nice-select.open,
+button:active,
+button.nice-select.open,
+input[type="submit"]:active,
+input[type="submit"].nice-select.open,
+input[type="reset"]:active,
+input[type="reset"].nice-select.open,
+input[type="button"]:active,
+input[type="button"].nice-select.open {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px rgba(0, 0, 0, 0.1) inset; }
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  background-color: #DB5461; }
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  background-color: #df6974; }
+
+.button.button-secondary,
+button.button-secondary,
+input[type="submit"].button-secondary,
+input[type="reset"].button-secondary,
+input[type="button"].button-secondary {
+  background-color: #686963; }
+
+.button.button-secondary:hover,
+button.button-secondary:hover,
+input[type="submit"].button-secondary:hover,
+input[type="reset"].button-secondary:hover,
+input[type="button"].button-secondary:hover,
+.button.button-secondary:focus,
+button.button-secondary:focus,
+input[type="submit"].button-secondary:focus,
+input[type="reset"].button-secondary:focus,
+input[type="button"].button-secondary:focus {
+  background-color: #75766f; }
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  padding: 8px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 3px;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  margin: 5px 0 15px 0;
+  max-width: 100%;
+  max-height: 850px;
+  font-size: 0.8em;
+  transition: border-color 0.2s ease-out; }
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+textarea {
+  min-height: 120px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border: 1px solid #999;
+  outline: 0; }
+
+input[type="email"].error,
+input[type="number"].error,
+input[type="search"].error,
+input[type="text"].error,
+input[type="tel"].error,
+input[type="url"].error,
+input[type="password"].error,
+.nice-select.error {
+  border: 1px solid #DB5461;
+  color: #DB5461; }
+
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+
+fieldset {
+  padding: 0;
+  border-width: 0; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
 
 /*# sourceMappingURL=app.css.map */

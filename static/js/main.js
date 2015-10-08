@@ -1,10 +1,10 @@
 $(document).ready(function() {
-	var toggleButton = $('.menu-controller');
-	var body = $('body');
+  var toggleButton = $('.menu-controller');
+  var body = $('body');
 
-	$.fn.hasAttr = function(name) {
-		return this.attr(name) !== undefined;
-	}
+  $.fn.hasAttr = function(name) {
+    return this.attr(name) !== undefined;
+  }
 
   function removeClasses(classPrefix) {
     var bodyHasClasses = body.hasAttr('class');
@@ -24,11 +24,22 @@ $(document).ready(function() {
     classToAdd = 'active-' + thisId;
     alreadyAdded = body.hasClass(classToAdd);
     if (alreadyAdded) {
-    	body.removeClass(classToAdd);
+      body.removeClass(classToAdd);
+    } else {
+      removeClasses('active-');
+      body.addClass(classToAdd);
     }
-    else {
-    	removeClasses('active-');
-    	body.addClass(classToAdd);
-    }
+  });
+
+  // initialize fast click
+  if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body);
+    }, false);
+  }
+
+  // initialize selects
+  $(document).ready(function() {
+    $('select').niceSelect();
   });
 });

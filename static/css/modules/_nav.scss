@@ -59,7 +59,7 @@ nav {
       width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
-      padding: 0 15px;
+      padding: 0 12px;
       line-height: 45px;
       color: #444;
       font-size: 14px;
@@ -251,6 +251,7 @@ body.active-userControl {
       font-weight: bold;
       margin:0 0 5px 0;
       color: #777;
+      font-family: "Roboto", sans-serif;
       i {
         color: $primary;
         font-size: 16px;
