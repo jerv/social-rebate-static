@@ -65,4 +65,21 @@ $(document).ready(function() {
       removeClasses('active-');
     });
   }
+
+  var am = $('#anchorMenu');
+  var al = $('.anchor-link');
+  var alContent = [];
+
+  $(al).each(function(){
+    alContent.push($(this).text());
+    $(this).attr('id', 'anchor-' + $(this).text());
+  });
+
+  $(alContent).each(function(){
+    $('<li><a href="#anchor-' + this + '" id="anchor-' + this + '">' + this + '</a>').appendTo(am);
+  });
+
+  console.log(alContent);
+
+  console.log('the second anchor link is ' + alContent[1]);
 });

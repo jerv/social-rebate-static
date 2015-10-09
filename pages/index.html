@@ -19,16 +19,17 @@
   
   <div class="row margin-md">
     <div class="col-xs-12 col-sm-4 col-md-3">
-    
+      <ul id="anchorMenu"></ul>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9">
-      <h1>Header 1</h1>
-      <h2>Header 2</h2>
-      <h3>Header 3</h3>
-      <h4>Header 4</h4>
-      <h5>Header 5</h5>
+      <h2 class="anchor-link">Headers</h2>
+      <h1>H1</h1>
+      <h2>H2</h2>
+      <h3>H3</h3>
+      <h4>H4</h4>
+      <h5>H5</h5>
       <div class="margin-md">
-      <h2>Typograpy</h2>
+      <h2 class="anchor-link">Typograpy</h2>
         <label>Label</label>
         <p>
           Lorem ipsum Mollit in veniam laborum aliqua labore officia consectetur aliquip sed reprehenderit enim ullamco irure laborum magna magna ut commodo magna occaecat id in veniam incididunt sint ea adipisicing dolore qui sunt consequat tempor culpa culpa.
@@ -46,7 +47,7 @@
           Lorem ipsum Mollit in veniam laborum.
         </p>
       </div>
-      <h2>Inputs</h2>
+      <h2 class="anchor-link">Inputs</h2>
       <div class="row">
         <div class="col-xs-12 col-md-6">
           <label>Text</label>
@@ -77,7 +78,7 @@
         </div>
       </div>  
       <div class="margin-md">
-        <h2>Buttons</h2>
+        <h2 class="anchor-link">Buttons</h2>
         <label>Normal, Reset, type="button, type="submit"</label>
         <a href="javascript:void(0);" class="button">Normal Button</a><br>
         <label>Primary Button</label>
@@ -86,7 +87,36 @@
         <a href="javascript:void(0);" class="button button-secondary">Button Secondary</a><br>
         <a href="javascript:void(0);" class="text-link">.text-link</a>
       </div>
+      <h2 class="anchor-link">Switches</h2>
+      <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1">
+        <label class="onoffswitch-label" for="myonoffswitch1"></label>
+      </div>
+      <label>Checked Switch</label>
+      <div class="onoffswitch">
+        <input type="checkbox" checked name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2">
+        <label class="onoffswitch-label" for="myonoffswitch2"></label>
+      </div>
+      <h2 class="anchor-link">Demo Controls</h2>
+      <label>Toggle .has-notifications</label>
+      <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox demo-notifications" id="demoNotifications">
+        <label class="onoffswitch-label" for="demoNotifications"></label>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- FOR DEMO ONLY DO NOT COPY TO PROJECT -->
+
+<script type="text/javascript">
+  window.onload = function() {
+    $('.demo-notifications').click(function() {
+      $('#toggleNotifications').toggleClass('has-notifications');
+    });
+  };
+</script>
+
+<!-- /FOR DEMO ONLY DO NOT COPY TO PROJECT -->
+
 {% endblock %}
