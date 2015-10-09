@@ -2514,9 +2514,10 @@ body.active-toggleNav #navSideBar {
       margin-left: -22.5px;
       top: 0; } }
 
-h5.u-mobile-only {
+h1.u-mobile-only {
   position: absolute;
   top: 0;
+  font-weight: bold;
   left: 88px;
   line-height: 45px;
   margin: 0;
@@ -2641,21 +2642,13 @@ body.active-toggleNotifications #userControl .u-desktop-only {
 body.active-toggleNotifications #notificationsSideBar {
   right: 0; }
 
-.page-heading-mobile-title {
-  display: block;
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
-  font-weight: bold;
-  font-size: 10px;
-  text-align: center;
-  padding: 3px 0; }
-
 .page-heading {
   background-color: #f2f2f2;
   padding: 10px 0;
   text-align: center; }
-  .page-heading h3 {
+  .page-heading h1 {
     margin: 0;
+    font-size: 28px;
     line-height: 40px;
     display: none; }
   .page-heading .button,
@@ -2678,7 +2671,7 @@ body.active-toggleNotifications #notificationsSideBar {
       text-align: left; }
       .page-heading .actions {
         float: right; }
-      .page-heading h3 {
+      .page-heading h1 {
         display: inline-block;
         float: left; }
       .page-heading .button,

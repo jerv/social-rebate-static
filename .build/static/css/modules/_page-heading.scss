@@ -1,18 +1,10 @@
-.page-heading-mobile-title {
-  display: block;
-  background-color: #fafafa;
-  border-bottom:1px solid #ddd;
-  font-weight: bold;
-  font-size: 10px;
-  text-align: center;
-  padding: 3px 0;
-}
 .page-heading {
   background-color: #f2f2f2;
   padding: 10px 0;
   text-align: center;
-  h3 {
+  h1 {
     margin:0;
+    font-size: 28px;
     line-height: 40px;
     display: none;
   }
@@ -34,7 +26,7 @@
     .actions {
       float: right;
     }
-    h3 {
+    h1 {
       display: inline-block;
       float:left;
     } 

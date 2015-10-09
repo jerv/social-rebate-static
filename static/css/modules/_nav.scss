@@ -152,9 +152,10 @@ body.active-toggleNav {
   }
 }
 
-h5.u-mobile-only {
+h1.u-mobile-only {
   position: absolute;
   top:0;
+  font-weight: bold;
   left: $nav-size * 2 - 2;
   line-height: $nav-size;
   margin:0;
