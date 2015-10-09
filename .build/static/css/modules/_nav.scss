@@ -130,10 +130,10 @@ body.active-toggleNav {
 
 #siteId {
   padding: 9px;
-  width: $nav-size;
-  height: $nav-size;
+  width: $nav-size - 5;
+  height: $nav-size - 5;
   position: absolute;
-  top: 0;
+  top: 1px;
   left: $nav-size;
   transition: 0.1s all ease-out;
   &:hover {
@@ -145,8 +145,24 @@ body.active-toggleNav {
   }
   @media (min-width:640px) {
     left: 50%;
+    width: $nav-size;
+    height: $nav-size;
     margin-left: -$nav-size / 2;
+    top:0;
   }
+}
+
+h5.u-mobile-only {
+  position: absolute;
+  top:0;
+  left: $nav-size * 2 - 2;
+  line-height: $nav-size;
+  margin:0;
+  width: 40%;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
 }
 
 #userControl {

@@ -3,6 +3,9 @@ $(document).ready(function() {
   var sideMenus = $('.side-element');
   var body = $('body');
 
+  var content = $('#bodyContent');
+  var windowWidth = $(window).width();
+
   $.fn.hasAttr = function(name) {
     return this.attr(name) !== undefined;
   }
@@ -33,17 +36,6 @@ $(document).ready(function() {
     }
   });
 
-  $(sideMenus).mouseenter(function() {
-    clearTimeout($('#bodyContent').data('timeoutId'))
-  });
-
-  $('#bodyContent').mouseenter(function() {
-    timeoutId = setTimeout(function(){
-      removeClasses('active-');
-    }, 650);
-    $(this).data('timeoutId', timeoutId); 
-  });
-
   // initialize fast click
   if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
@@ -55,4 +47,22 @@ $(document).ready(function() {
   $(document).ready(function() {
     $('select').niceSelect();
   });
+
+  if (windowWidth >= 991) {
+    $(sideMenus).mouseenter(function() {
+      clearTimeout($(content).data('timeoutId'))
+    });
+
+    $(content).mouseenter(function() {
+      timeoutId = setTimeout(function(){
+        removeClasses('active-');
+      }, 650);
+      $(this).data('timeoutId', timeoutId); 
+    });
+  }
+  else {
+    $(content).click(function(){
+      removeClasses('active-');
+    });
+  }
 });

@@ -1,105 +1,100 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Social Rebate</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <link rel="stylesheet" href="/static/css/app.css">
-        <link rel="stylesheet" href="/static/fonts/typicons.css">
-        <script src="/static/js/vendor/modernizr-2.6.2.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>UI Elements Demo | Social Rebate</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/fonts/typicons.css">
+  <script src="/static/js/vendor/modernizr-2.6.2.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,100,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:600,200' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" type="image/x-icon" href=" images/favicon.ico ">
+</head>
 
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,100,400italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Raleway:600,200' rel='stylesheet' type='text/css'>
+<body>
+  <nav>
+    <i class="typcn typcn-th-menu menu-controller" id="toggleNav"></i>
+    <h5 class="u-mobile-only">UI Elements Demo</h5>
+    <a id="siteId" href=" /index.html ">
+      <img src="/static/images/logo-small.png">
+    </a>
+    <a id="userControl" class="menu-controller" href="javascript:void(0);">
+      <div class="u-mobile-only">
+        <i class="typcn typcn-user-outline"></i>
+      </div>
+      <div class="u-desktop-only">
+        <i class="typcn typcn-user-outline"></i> <span>Jeremy</span>
+      </div>
+    </a>
+    <i class="typcn typcn-bell menu-controller" id="toggleNotifications"></i>
+  </nav>
+  <section id="navSideBar" class="side-element">
+    <ul>
+      <li><a class="new-rebate" href="javacsript:void(0);"><i class="typcn typcn-plus"></i> New Rebate</a></li>
+      <li><a class="" href="/index.html"><i class="typcn typcn-tags"></i> My Rebates</a></li>
+      <li><a href="javacsript:void(0);"><i class="typcn typcn-chart-line"></i> Analytics</a></li>
+      <li><a href="javacsript:void(0);"><i class="typcn typcn-cog"></i> Store Settings</a></li>
+      <li><a href="javacsript:void(0);"><i class="typcn typcn-directions"></i> Help Center</a></li>
+    </ul>
+  </section>
+  <section id="userSideBar" class="side-element">
+    <ul>
+      <li class="heading">My Account</li>
+      <li><a href="javacsript:void(0);"><i class="typcn typcn-user-outline"></i> Profile Settings</a></li>
+      <li><a href="javacsript:void(0);"><i class="typcn typcn-credit-card"></i> Payment Settings</a></li>
+      <li><a href="javacsript:void(0);"><i class="typcn typcn-eject"></i> Sign out</a></li>
+    </ul>
+  </section>
+  <section id="notificationsSideBar" class="side-element">
+    <ul>
+      <li class="heading">Notifications</li>
+    </ul>
+    <!-- 
+      if there are no notications show this tag instead.
+      <p>No new messages</p>
+    -->
+    <!--
 
-        <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
-    </head>
+      Notification class types:
+      .general - use for misc updates on really anything
+      .critical - use for important and highly crucial updates to the user
+      .report - use to update the user on how rebates are performing etc.
+      .heart - use for special thank you type messages, like confirming that their plan has been upgraded.
 
-    <body>
-      <nav>
-        <i class="typcn typcn-th-menu menu-controller" id="toggleNav"></i>
-        <a id="siteId"href="/index.html">
-          <img src="/static/images/logo-small.png">
-        </a>
-        <a id="userControl" class="menu-controller" href="javascript:void(0);">
-          <div class="u-mobile-only">
-            <i class="typcn typcn-user-outline"></i>
-          </div>
-          <div class="u-desktop-only">
-            <i class="typcn typcn-user-outline"></i> <span>Jeremy</span>
-          </div>
-        </a>
-        <i class="typcn typcn-bell menu-controller" id="toggleNotifications"></i>
-      </nav>
-      <section id="navSideBar" class="side-element">
-        <ul>
-          <li><a class="new-rebate" href="javacsript:void(0);"><i class="typcn typcn-plus"></i> New Rebate</a></li>  
-          <li><a class="" href="/index.html"><i class="typcn typcn-tags"></i> My Rebates</a></li>
-          <li><a href="javacsript:void(0);"><i class="typcn typcn-chart-line"></i> Analytics</a></li>        
-          <li><a href="javacsript:void(0);"><i class="typcn typcn-cog"></i> Store Settings</a></li>
-          <li><a href="javacsript:void(0);"><i class="typcn typcn-directions"></i> Help Center</a></li>
-        </ul>
-      </section>
-
-      <section id="userSideBar" class="side-element">
-        <ul>
-          <li class="heading">My Account</li>
-          <li><a href="javacsript:void(0);"><i class="typcn typcn-user-outline"></i> Profile Settings</a></li>
-          <li><a href="javacsript:void(0);"><i class="typcn typcn-credit-card"></i> Payment Settings</a></li>
-          <li><a href="javacsript:void(0);"><i class="typcn typcn-eject"></i> Sign out</a></li>
-        </ul>
-      </section>
-
-      <section id="notificationsSideBar" class="side-element">
-        <ul>
-          <li class="heading">Notifications</li>
-        </ul>
-        <!-- if there are no notications
-          <p>No new messages</p>
-        -->
-        <!--
-
-          Notification class types:
-          .general - use for misc updates on really anything
-          .critical - use for important and highly crucial updates to the user
-          .report - use to update the user on how rebates are performing etc.
-          .heart - use for special thank you type messages, like confirming that their plan has been upgraded.
-
-        -->
-        <a href="javascript:void(0);" class="general">
-          <h5><i class="typcn"></i> Generic Update</h5>
-          <p>Notification message goes here.</p>
-        </a>
-        <a href="javascript:void(0);" class="critical">
-          <h5><i class="typcn"></i> Your Email is Not Verified</h5>
-          <p>Check your email to confirm your address.</p>
-        </a>
-        <a href="javascript:void(0);" class="report">
-          <h5><i class="typcn"></i> 12 conversions generated.</h5>
-          <p>See full weekly report.</p>
-        </a>
-        <a href="javascript:void(0);" class="heart">
-          <h5><i class="typcn"></i> Account upgraded!</h5>
-          <p>Thank you for choosing premium.</p>
-        </a>
-      </section>
-
-    <section id="bodyContent">
-      
+    -->
+    <a href="javascript:void(0);" class="general">
+      <h5><i class="typcn"></i> Generic Update</h5>
+      <p>Notification message goes here.</p>
+    </a>
+    <a href="javascript:void(0);" class="critical">
+      <h5><i class="typcn"></i> Your Email is Not Verified</h5>
+      <p>Check your email to confirm your address.</p>
+    </a>
+    <a href="javascript:void(0);" class="report">
+      <h5><i class="typcn"></i> 12 conversions generated.</h5>
+      <p>See full weekly report.</p>
+    </a>
+    <a href="javascript:void(0);" class="heart">
+      <h5><i class="typcn"></i> Account upgraded!</h5>
+      <p>Thank you for choosing premium.</p>
+    </a>
+  </section>
+  <section id="bodyContent">
+    
   <h1>We're sorry!</h1>
   <p>The page <b id="url"></b> could not be found on this server.</p>
 
-    </section> 
+  </section>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="/static/js/vendor/fastclick.js"></script>
+  <script src="/static/js/vendor/jquery.nice-select.min.js"></script>
+  <script src="/static/js/main.js"></script>
+</body>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="/static/js/vendor/fastclick.js"></script>
-    <script src="/static/js/vendor/jquery.nice-select.min.js"></script>
-    <script src="/static/js/main.js"></script>
-  </body>
-
-  
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
 
@@ -113,5 +108,6 @@
       });
     })
   </script>
+
 
 </html>

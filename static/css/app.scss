@@ -110,6 +110,9 @@ input[type="button"] {
   transition: all 0.2s ease-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 -2px rgba(0, 0, 0, 0.11) inset;
   background-color: $secondary;
+  i {
+    font-size: 1.4em;
+  }
 }
 
 input[type="reset"] {
