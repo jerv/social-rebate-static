@@ -12,7 +12,7 @@
         <script src="/static/js/vendor/modernizr-2.6.2.js"></script>
 
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,100,400italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:600,200' rel='stylesheet' type='text/css'>
 
         <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
     </head>
@@ -33,9 +33,9 @@
         </a>
         <i class="typcn typcn-bell menu-controller" id="toggleNotifications"></i>
       </nav>
-      <section id="navSideBar">
+      <section id="navSideBar" class="side-element">
         <ul>
-          <li><a href="javacsript:void(0);"><i class="typcn typcn-plus"></i> New Rebate</a></li>  
+          <li><a class="new-rebate" href="javacsript:void(0);"><i class="typcn typcn-plus"></i> New Rebate</a></li>  
           <li><a class="" href="/index.html"><i class="typcn typcn-tags"></i> My Rebates</a></li>
           <li><a href="javacsript:void(0);"><i class="typcn typcn-chart-line"></i> Analytics</a></li>        
           <li><a href="javacsript:void(0);"><i class="typcn typcn-cog"></i> Store Settings</a></li>
@@ -43,7 +43,7 @@
         </ul>
       </section>
 
-      <section id="userSideBar">
+      <section id="userSideBar" class="side-element">
         <ul>
           <li class="heading">My Account</li>
           <li><a href="javacsript:void(0);"><i class="typcn typcn-user-outline"></i> Profile Settings</a></li>
@@ -52,7 +52,7 @@
         </ul>
       </section>
 
-      <section id="notificationsSideBar">
+      <section id="notificationsSideBar" class="side-element">
         <ul>
           <li class="heading">Notifications</li>
         </ul>
@@ -86,10 +86,12 @@
         </a>
       </section>
 
-    
+    <section id="bodyContent">
+      
   <h1>We're sorry!</h1>
   <p>The page <b id="url"></b> could not be found on this server.</p>
 
+    </section> 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="/static/js/vendor/fastclick.js"></script>

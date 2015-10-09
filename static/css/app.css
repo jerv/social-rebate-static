@@ -2442,20 +2442,26 @@ nav {
     .side-element ul a, #navSideBar ul a, #userSideBar ul a, #notificationsSideBar ul a {
       display: block;
       width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      white-space: nowrap;
       padding: 0 12px;
       line-height: 45px;
       color: #444;
       font-size: 14px;
       transition: 0.1s background-color ease-out; }
-      .side-element ul a.active, #navSideBar ul a.active, #userSideBar ul a.active, #notificationsSideBar ul a.active {
+      .side-element ul a.new-rebate, #navSideBar ul a.new-rebate, #userSideBar ul a.new-rebate, #notificationsSideBar ul a.new-rebate {
         background-color: #DB5461;
         color: #fff; }
-        .side-element ul a.active:hover, #navSideBar ul a.active:hover, #userSideBar ul a.active:hover, #notificationsSideBar ul a.active:hover {
+        .side-element ul a.new-rebate:hover, #navSideBar ul a.new-rebate:hover, #userSideBar ul a.new-rebate:hover, #notificationsSideBar ul a.new-rebate:hover {
           background-color: #df6571; }
-        .side-element ul a.active i, #navSideBar ul a.active i, #userSideBar ul a.active i, #notificationsSideBar ul a.active i {
+        .side-element ul a.new-rebate i, #navSideBar ul a.new-rebate i, #userSideBar ul a.new-rebate i, #notificationsSideBar ul a.new-rebate i {
           color: #eda8af; }
+      .side-element ul a.active, #navSideBar ul a.active, #userSideBar ul a.active, #notificationsSideBar ul a.active {
+        background-color: #fff;
+        font-weight: bold;
+        color: #222;
+        position: relative; }
+        .side-element ul a.active i, #navSideBar ul a.active i, #userSideBar ul a.active i, #notificationsSideBar ul a.active i {
+          color: #DB5461; }
       .side-element ul a:hover, #navSideBar ul a:hover, #userSideBar ul a:hover, #notificationsSideBar ul a:hover {
         background-color: #fafafa; }
       .side-element ul a:active, #navSideBar ul a:active, #userSideBar ul a:active, #notificationsSideBar ul a:active, .side-element ul a.nice-select.open, #navSideBar ul a.nice-select.open, #userSideBar ul a.nice-select.open, #notificationsSideBar ul a.nice-select.open {
@@ -2715,7 +2721,13 @@ h3,
 h4,
 h5 {
   font-family: 'Raleway', sans-serif;
+  font-weight: bold;
   margin: 0 0 15px 0; }
+
+h1,
+h2,
+h3 {
+  font-weight: 200; }
 
 p {
   font-size: 1em; }

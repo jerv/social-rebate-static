@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var toggleButton = $('.menu-controller');
+  var sideMenus = $('.side-element');
   var body = $('body');
 
   $.fn.hasAttr = function(name) {
@@ -23,12 +24,24 @@ $(document).ready(function() {
     thisId = $(this).attr('id');
     classToAdd = 'active-' + thisId;
     alreadyAdded = body.hasClass(classToAdd);
+    clearTimeout($(sideMenus).data('timeoutId'));
     if (alreadyAdded) {
       body.removeClass(classToAdd);
     } else {
       removeClasses('active-');
       body.addClass(classToAdd);
     }
+  });
+
+  $(sideMenus).mouseenter(function() {
+    clearTimeout($('#bodyContent').data('timeoutId'))
+  });
+
+  $('#bodyContent').mouseenter(function() {
+    timeoutId = setTimeout(function(){
+      removeClasses('active-');
+    }, 650);
+    $(this).data('timeoutId', timeoutId); 
   });
 
   // initialize fast click
