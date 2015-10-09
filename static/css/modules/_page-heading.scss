@@ -1,0 +1,55 @@
+.page-heading-mobile-title {
+  display: block;
+  background-color: #fafafa;
+  border-bottom:1px solid #ddd;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
+  padding: 3px 0;
+}
+.page-heading {
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  text-align: center;
+  h3 {
+    margin:0;
+    line-height: 40px;
+    display: none;
+  }
+  .button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    margin:0 5px 0 0;
+    font-size: 11px;
+    padding: 0 10px;
+    line-height: 30px;
+    i {
+      font-size: 11px;
+    }
+  }
+  @media (min-width:641px) {
+    text-align: left;
+    .actions {
+      float: right;
+    }
+    h3 {
+      display: inline-block;
+      float:left;
+    } 
+    .button,
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+      float: none;
+      padding: 0 15px;
+      font-size: 12px;
+      line-height: 40px;
+      i {
+        font-size: 1.4em;
+      }
+    }
+  }
+}
