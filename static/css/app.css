@@ -2578,6 +2578,29 @@ body.active-userControl #userSideBar {
   position: absolute;
   right: 0;
   top: 0; }
+  #toggleNotifications span {
+    display: none; }
+@keyframes ding {
+  0% {
+    -moz-transform: rotate(6deg);
+    -webkit-transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+    -ms-transform: rotate(6deg);
+    transform: rotate(6deg); }
+  100% {
+    -moz-transform: rotate(-6deg);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    transform: rotate(-6deg); } }
+  #toggleNotifications.has-notifications {
+    color: #fff;
+    background-color: #DB5461; }
+    #toggleNotifications.has-notifications:before {
+      animation-name: ding;
+      animation-duration: 0.8s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; }
   #toggleNotifications:active, #toggleNotifications.nice-select.open {
     background-color: #fafafa;
     box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
@@ -2608,6 +2631,11 @@ body.active-userControl #userSideBar {
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); }
       #notificationsSideBar > a:hover h5 {
         color: #333; }
+    #notificationsSideBar > a:active, #notificationsSideBar > a.nice-select.open {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      background-color: #fafafa; }
+      #notificationsSideBar > a:active h5, #notificationsSideBar > a.nice-select.open h5 {
+        color: #DB5461; }
     #notificationsSideBar > a h5 {
       font-size: 12px;
       text-transform: uppercase;
@@ -2981,7 +3009,6 @@ fieldset {
   padding: 0;
   border-width: 0; }
 
-input[type="checkbox"],
 input[type="radio"] {
   display: inline; }
 
@@ -2989,5 +3016,57 @@ label > .label-body {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal; }
+
+.onoffswitch {
+  position: relative;
+  width: 40px;
+  margin: 20px 0 35px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+.onoffswitch-checkbox {
+  display: none; }
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 10px;
+  padding: 0;
+  line-height: 10px;
+  border: 0px solid #999999;
+  border-radius: 23px;
+  background-color: #EEEEEE;
+  transition: all 0.2s ease-out; }
+
+.onoffswitch-label:before {
+  content: "";
+  display: block;
+  width: 23px;
+  margin: -6.5px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 26px;
+  border-radius: 23px;
+  box-shadow: 0 6px 12px 0px #757575;
+  transition: all 0.2s ease-out; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+  background-color: #EDB6BB; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label,
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  border-color: #EDB6BB; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  right: 0px;
+  background-color: #DB5461;
+  box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=app.css.map */
