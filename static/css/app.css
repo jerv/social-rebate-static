@@ -2399,7 +2399,7 @@ nav {
   left: 0;
   height: 45px;
   width: 100%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 9002; }
 
 .nav-button, i#toggleNav, #userControl .u-mobile-only i, #userControl .u-desktop-only, #toggleNotifications {
@@ -2718,6 +2718,49 @@ body.active-toggleNotifications #notificationsSideBar {
         .page-heading input[type="button"] i {
           font-size: 1.4em; } }
 
+#anchorMenu {
+  list-style-type: none;
+  padding: 0;
+  text-align: center; }
+  #anchorMenu.fixed {
+    position: fixed;
+    top: 70px; }
+  #anchorMenu:before {
+    content: "Menu:";
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #DB5461; }
+  #anchorMenu li {
+    display: block; }
+    #anchorMenu li a {
+      display: block;
+      line-height: 35px;
+      padding: 0 10px 0 0;
+      color: #888;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      transition: padding 0.2s ease-out; }
+      #anchorMenu li a:hover {
+        padding: 0 10px 0 5px;
+        color: #222; }
+      #anchorMenu li a:active, #anchorMenu li a.nice-select.open {
+        color: #DB5461; }
+      #anchorMenu li a.active {
+        padding: 0 10px 0 5px;
+        border-left: 5px solid #DB5461;
+        color: #222; }
+  @media (min-width: 640px) {
+    #anchorMenu {
+      text-align: left; }
+      #anchorMenu:before {
+        display: none; }
+      #anchorMenu li {
+        margin-bottom: 7px; }
+        #anchorMenu li a {
+          line-height: 24px; } }
+
 [class|="margin"] {
   margin-top: 20px;
   margin-bottom: 20px; }
@@ -2803,6 +2846,8 @@ a {
     color: #DB5461; }
     a.text-link:hover {
       color: #c82a39; }
+  a:focus {
+    outline: none; }
 
 body {
   font-family: 'Roboto', sans-serif; }

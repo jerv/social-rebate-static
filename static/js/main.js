@@ -66,20 +66,68 @@ $(document).ready(function() {
     });
   }
 
-  var am = $('#anchorMenu');
-  var al = $('.anchor-link');
-  var alContent = [];
+  // REST ONLY NEEDED FOR PAGES WITH ANCHOR LINK MENUS
 
-  $(al).each(function(){
-    alContent.push($(this).text());
-    $(this).attr('id', 'anchor-' + $(this).text());
-  });
+  function buildAnchorMenu() {
+    var am = $('#anchorMenu');
+    var al = $('.anchor-link');
+    var alContent = [];
+    var alPosition = [];
+  
+    // get anchors hashes and text
+    $(al).each(function(){
+      alPosition.push($(this).offset().top);
+      alContent.push($(this).text());
+      $(this).attr('id', 'anchor-' + $(this).text());
+    });
 
-  $(alContent).each(function(){
-    $('<li><a href="#anchor-' + this + '" id="anchor-' + this + '">' + this + '</a>').appendTo(am);
-  });
+    // create anchor menu links
+    $(alContent).each(function(){
+      $('<li><a href="#anchor-' + this + '" id="anchor-' + this + '">' + this + '</a>').appendTo(am);
+    });
 
-  console.log(alContent);
+    var windowWidth = $(window).width();
+    var amLinks = $('#anchorMenu a');
+    var amPosition = $(am).offset().top;
 
-  console.log('the second anchor link is ' + alContent[1]);
+    // update active based on scroll position
+    if (windowWidth > 640) {
+      // move screen when an anchor menu link is clicked
+      $(amLinks).click(function(e){
+        var jumpobj = $(this).parent().index();
+        var target = alPosition[jumpobj] - 55;
+        var thespeed = 1000;
+        $('html,body').animate({
+          scrollTop: target
+        }, thespeed, 'swing');
+        e.preventDefault();
+      })
+      // add active on first link 
+      $('#anchorMenu li:first-of-type a').addClass('active');
+      $(window).scroll(function(){
+        var currentPosition = $(window).scrollTop();
+        
+        if (amPosition <= currentPosition + 70) {
+          $(am).addClass('fixed');
+        }
+        else {
+          $(am).removeClass('fixed');
+        }
+
+        for (var i = 1; i < alPosition.length + 1; i++) {
+          if (currentPosition + 80 >= alPosition[i - 1] && currentPosition + 80 < alPosition[i]) {
+            $(amLinks).removeClass('active');
+            $('#anchorMenu li:nth-of-type(' + i + ') a').addClass('active');
+          }
+        }
+        // return false;
+
+        // if ($.inArray(currentPosition, alPosition)) {
+          // console.log('fire');
+        // }
+      });
+    }
+  }
+
+  buildAnchorMenu();
 });

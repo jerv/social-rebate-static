@@ -49,6 +49,9 @@ a {
   		color: darken($primary, 12);
   	}
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 body {
