@@ -1,0 +1,53 @@
+#anchorMenu {
+	list-style-type:none;
+	padding:0;
+	text-align: center;
+	&.fixed {
+		position: fixed;
+		top: $nav-size + 25;
+	}
+	&:before {
+		content:"Menu:";
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $primary;
+	}
+	li {
+		display: block;
+		a {
+			display: block;
+			line-height: 35px;
+			padding: 0 10px 0 0;
+			color: #888;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 14px;
+			transition: padding 0.2s ease-out;
+			&:hover {
+				padding: 0 10px 0 5px;
+				color: #222;
+			}
+			&:active {
+				color: $primary;
+			}
+			&.active {
+				padding: 0 10px 0 5px;
+				border-left: 5px solid $primary;
+				color: #222;
+			}
+		}
+	}
+	@media (min-width:640px) {
+		text-align: left;
+		&:before {
+			display: none;
+		}
+		li {
+			margin-bottom: 7px;
+			a {
+				line-height: 24px;
+			}
+		}
+	}
+}
