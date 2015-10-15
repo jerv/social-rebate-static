@@ -86,6 +86,29 @@ p {
   }
 }
 
+.u-well {
+  display: block;
+  padding: 8px;
+  background-color: #eee;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  *:last-child {
+    margin-bottom: 0;
+  }
+  @media (min-width:640px) {
+    padding: 15px;
+  }
+}
+
+.u-card {
+  @extend .u-well;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -271,6 +294,7 @@ legend {
   color: #777;
   text-transform: uppercase;
   display: block;
+  position: relative;
 }
 
 fieldset {
@@ -294,6 +318,9 @@ label > .label-body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  label {
+    position: static;
+  }
 }
 
 .onoffswitch-checkbox {
