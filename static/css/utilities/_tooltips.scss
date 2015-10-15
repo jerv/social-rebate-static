@@ -1,0 +1,54 @@
+.tool-tip {
+	&:before {
+		content: "\e091";
+		font-family: 'typicons';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 1.2em;
+    color: #bbb;
+    transition:all 0.2s linear;
+    cursor: pointer;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius:50%;
+    border: 1px solid #ddd;
+    margin-left: 5px;
+	}
+	section {
+		position: absolute;
+		top: 130%;
+		box-sizing: border-box;
+		display: none;
+		background: #fff;
+		box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+		border-radius: 3px;
+		text-transform: none;
+		color: #777;
+		padding: 12px;
+		font-weight: normal;
+		font-size: 12px;
+		max-width: 320px;
+		z-index: 9002;
+	}
+	&:hover {
+		&:before {
+			color: $primary;
+			border-color: $primary;
+		}
+		section {
+			display: block;
+		}
+	}
+}

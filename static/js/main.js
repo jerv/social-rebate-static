@@ -6,6 +6,24 @@ $(document).ready(function() {
   var content = $('#bodyContent');
   var windowWidth = $(window).width();
 
+  function elementText(el, separator) {
+      var textContents = [];
+      for(var chld = el.firstChild; chld; chld = chld.nextSibling) {
+          if (chld.nodeType == 3) { 
+              textContents.push(chld.nodeValue);
+          }
+      }
+      return textContents.join(separator);
+  }
+
+  $.fn.textNotChild = function(elementSeparator, nodeSeparator) {
+  if (arguments.length<2){nodeSeparator="";}
+  if (arguments.length<1){elementSeparator="";}
+      return $.map(this, function(el){
+          return elementText(el,nodeSeparator);
+      }).join(elementSeparator);
+  }
+
   $.fn.hasAttr = function(name) {
     return this.attr(name) !== undefined;
   }
@@ -35,6 +53,10 @@ $(document).ready(function() {
       body.addClass(classToAdd);
     }
   });
+
+  // scroll bars
+
+  $('.side-element').perfectScrollbar(); 
 
   // initialize fast click
   if ('addEventListener' in document) {
@@ -77,8 +99,8 @@ $(document).ready(function() {
     // get anchors hashes and text
     $(al).each(function(){
       alPosition.push($(this).offset().top);
-      alContent.push($(this).text());
-      $(this).attr('id', 'anchor-' + $(this).text());
+      alContent.push($(this).textNotChild());
+      $(this).attr('id', 'anchor-' + $(this).textNotChild());
     });
 
     // create anchor menu links
@@ -90,18 +112,19 @@ $(document).ready(function() {
     var amLinks = $('#anchorMenu a');
     var amPosition = $(am).offset().top;
 
+    // move screen when an anchor menu link is clicked
+    $(amLinks).click(function(e){
+      var jumpobj = $(this).parent().index();
+      var target = alPosition[jumpobj] - 55;
+      var thespeed = 1000;
+      $('html,body').animate({
+        scrollTop: target
+      }, thespeed, 'swing');
+      e.preventDefault();
+    })
+
     // update active based on scroll position
-    if (windowWidth > 640) {
-      // move screen when an anchor menu link is clicked
-      $(amLinks).click(function(e){
-        var jumpobj = $(this).parent().index();
-        var target = alPosition[jumpobj] - 55;
-        var thespeed = 1000;
-        $('html,body').animate({
-          scrollTop: target
-        }, thespeed, 'swing');
-        e.preventDefault();
-      })
+    if (windowWidth > 768) {
       // add active on first link 
       $('#anchorMenu li:first-of-type a').addClass('active');
       $(window).scroll(function(){
