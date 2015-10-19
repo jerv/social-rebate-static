@@ -18,8 +18,36 @@
 <body class="no-fixed-nav">
 
   
-  <h1>We're sorry!</h1>
-  <p>The page <b id="url"></b> could not be found on this server.</p>
+<!--
+  If page-heading contains no buttons and is being used just for its h1 add the class .u-desktop-only
+-->
+<div class="l-centered-container">
+  <div class="l-centered">
+    <div class="container margin-md">
+      <div class="l-site-badge">
+        <img src="/static/images/logo-md.png" %>
+        <h1>Social <span>Rebate</span></h1>
+      </div>
+      <h4 class="padding-xs u-txt-align-center">Register</h4>
+      <div class="u-card l-login">
+        <form>
+          <label>Email</label>
+          <input type="email">
+          <label>Password</label>
+          <input type="password">
+          <label>Repeat Password</label>
+          <input type="password">
+          <input type="submit" value="Create Account" class="button-primary u-block">
+        </form>
+        <div class="margin-sm">
+          <p class="muted">Already have an Account?</p>
+          <a href="login.html" class="text-link">Login</a>
+        </div>
+      </div>
+      <a href="javascript:void(0);" class="text-link margin-sm u-txt-align-center muted">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</div>
 
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -27,20 +55,6 @@
   <script src="/static/js/vendor/jquery.nice-select.min.js"></script>
   <script src="/static/js/main.js"></script>
 </body>
-
-  <script type="text/javascript" charset="utf-8">
-    $(document).ready(function() {
-
-      // Add the missing url to the text
-      $("#url").text(window.location.pathname);
-
-      // Fix the css locations dynamically
-      $("head link").each(function() {
-        for (var i=0; i<window.location.pathname.split(/\//g).length-2; i++)
-          $(this).attr("href", "../" + $(this).attr("href"));
-      });
-    })
-  </script>
-
+ 
 
 </html>
