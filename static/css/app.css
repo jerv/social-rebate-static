@@ -3010,40 +3010,29 @@ footer {
 .tool-tip:hover section {
   display: block; }
 
-@media (max-width: 640px) {
-  .u-desktop-only {
-    display: none !important; }
+html {
+  height: 100%; }
 
-  .u-mobile-only {
-    display: block !important; } }
-@media (min-width: 641px) {
-  .u-mobile-only {
-    display: none !important; }
-
-  .u-desktop-only {
-    display: block !important; } }
-.u-txt-align-right {
-  text-align: right; }
-
-.u-txt-align-center {
-  text-align: center; }
-
-.u-txt-align-left {
-  text-align: left; }
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%; }
+  body.no-fixed-nav {
+    margin-top: 0; }
 
 a {
   text-decoration: none !important; }
   a.text-link {
     font-size: 0.8em;
     text-transform: uppercase;
+    display: inline-block;
     color: #DB5461; }
+    a.text-link.muted {
+      color: #777;
+      font-size: 10px; }
     a.text-link:hover {
       color: #c82a39; }
   a:focus {
     outline: none; }
-
-body {
-  font-family: 'Roboto', sans-serif; }
 
 h1,
 h2,
@@ -3067,6 +3056,9 @@ p {
     font-size: 1.8em; }
     p.heading.small {
       font-size: 1.2em; }
+  p.muted {
+    color: #777;
+    font-size: 12px; }
 
 .u-well, .u-card {
   display: block;
@@ -3086,6 +3078,68 @@ p {
   background-color: #fff;
   border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+
+.u-block {
+  display: block;
+  width: 100%; }
+
+.u-txt-align-right {
+  text-align: right; }
+
+.u-txt-align-center {
+  text-align: center;
+  width: 100%; }
+
+.u-txt-align-left {
+  text-align: left; }
+
+@media (max-width: 640px) {
+  .u-desktop-only {
+    display: none !important; }
+
+  .u-mobile-only {
+    display: block !important; } }
+@media (min-width: 641px) {
+  .u-mobile-only {
+    display: none !important; }
+
+  .u-desktop-only {
+    display: block !important; } }
+.l-site-badge img {
+  margin: 0 auto;
+  display: block;
+  max-width: 80px;
+  margin-bottom: 15px; }
+.l-site-badge h1 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  margin-bottom: 35px; }
+  .l-site-badge h1 span {
+    font-weight: 300;
+    text-transform: none; }
+@media (max-width: 680px) {
+  .l-site-badge img {
+    max-width: 64px; }
+  .l-site-badge h1 {
+    font-size: 28px;
+    margin-bottom: 25px; } }
+
+.l-centered-container {
+  display: table;
+  height: 100%;
+  width: 100%; }
+  .l-centered-container .l-centered {
+    display: table-cell;
+    vertical-align: middle; }
+    .l-centered-container .l-centered .u-card {
+      max-width: 260px;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      padding: 25px; }
 
 .ezt-nav {
   position: absolute;
@@ -3304,6 +3358,60 @@ legend {
 fieldset {
   padding: 0;
   border-width: 0; }
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+  background-color: #FFF;
+  height: 8px;
+  vertical-align: middle;
+  margin: 15px 0 25px 0; }
+  input[type='range']:focus {
+    outline: 0; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  background-color: #eee;
+  height: 10px;
+  vertical-align: middle; }
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 10px;
+  background-color: #DB5461;
+  box-shadow: 0 -2px rgba(0, 0, 0, 0.2) inset;
+  height: 20px;
+  width: 12px;
+  vertical-align: middle;
+  margin-top: -6px;
+  cursor: pointer; }
+
+input[type='range']::-moz-range-track {
+  -moz-appearance: none;
+  border-radius: 10px;
+  background-color: #DB5461;
+  box-shadow: 0 -2px rgba(0, 0, 0, 0.2) inset;
+  height: 20px;
+  width: 12px;
+  vertical-align: middle;
+  margin-top: -6px;
+  cursor: pointer; }
+
+input[type='range']::-moz-range-thumb {
+  -moz-appearance: none;
+  border-radius: 10px;
+  background-color: #DB5461;
+  box-shadow: 0 -2px rgba(0, 0, 0, 0.2) inset;
+  height: 20px;
+  width: 12px;
+  vertical-align: middle;
+  margin-top: -6px;
+  cursor: pointer; }
 
 input[type="radio"] {
   display: inline; }

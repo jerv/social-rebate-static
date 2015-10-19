@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "authenticated.html" %}
 
 {% block body %}
 <!--
@@ -117,6 +117,8 @@
         <input type="checkbox" checked name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2">
         <label class="onoffswitch-label" for="myonoffswitch2"></label>
       </div>
+      <label>Range Selector</label>
+      <input type="range">
       <h2 class="anchor-link">Containers</h2>
       <section class="u-well">
         <p>This is a well, you can put content in it</p>

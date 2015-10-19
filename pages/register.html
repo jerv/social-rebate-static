@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!--
+  If page-heading contains no buttons and is being used just for its h1 add the class .u-desktop-only
+-->
+<div class="l-centered-container">
+  <div class="l-centered">
+    <div class="container margin-md">
+      <div class="l-site-badge">
+        <img src="{% static 'images/logo-md.png' %}" %>
+        <h1>Social <span>Rebate</span></h1>
+      </div>
+      <h4 class="padding-xs u-txt-align-center">Register</h4>
+      <div class="u-card l-login">
+        <form>
+          <label>Email</label>
+          <input type="email">
+          <label>Password</label>
+          <input type="password">
+          <label>Repeat Password</label>
+          <input type="password">
+          <input type="submit" value="Create Account" class="button-primary u-block">
+        </form>
+        <div class="margin-sm">
+          <p class="muted">Already have an Account?</p>
+          <a href="login.html" class="text-link">Login</a>
+        </div>
+      </div>
+      <a href="javascript:void(0);" class="text-link margin-sm u-txt-align-center muted">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
