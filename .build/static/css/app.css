@@ -3071,6 +3071,12 @@ h5 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   margin: 0 0 15px 0; }
+  h1.serif,
+  h2.serif,
+  h3.serif,
+  h4.serif,
+  h5.serif {
+    font-family: 'Roboto', sans-serif; }
 
 h1,
 h2,
@@ -3097,8 +3103,6 @@ p {
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px; }
-  .u-well *:last-child, .u-card *:last-child {
-    margin-bottom: 0; }
   @media (min-width: 640px) {
     .u-well, .u-card {
       padding: 15px; } }
