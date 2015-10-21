@@ -268,14 +268,12 @@
           </label>
           <div class="row">
             <div class="col-xs-2 col-md-3">
-              <input type="number">
+              <input type="number" value="25">
             </div>
             <div class="col-xs-10 col-md-9">
-              <input type="range">
+              <input type="range" value="25">
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-md-6">
           <label>Set End Date</label>
           <div class="row u-date-row">
             <div class="col-xs-4">
@@ -288,22 +286,50 @@
               <input type="number" placeholder="yyyy">
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
           <label>
             Conversion Reward
           </label>
-          <div class="row">
-            <div class="col-xs-12">
-              <select>
-                <option data-display="Select Reward">No Reward</option>
-                <option value="1">10% off Purchase</option>
-                <option value="2">25% off Purchase</option>
-                <option value="3">Add Conversion Reward</option>
-              </select>
+          <select>
+            <option data-display="Select Reward">No Reward</option>
+            <option value="1">10% off Purchase</option>
+            <option value="2">25% off Purchase</option>
+            <option value="3">Add Conversion Reward</option>
+          </select>
+          <label>Min Conversions Required</label>
+          <input type="number">
+          <label>Min Clicks Required</label>
+          <input type="number">
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="u-card">
+            <h4>Results</h4>
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <label>Max Rebates</label>
+                <h4 class="serif">25</h4>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <label>Estimated Rebates Paid</label>
+                <h4 class="serif">$450.00</h4>
+              </div>
             </div>
+            <div class="margin-sm"></div>
+            <h4>Estimates</h4>
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <label>Estimated Clicks</label>
+                <h4 class="serif">125</h4>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <label>Estimated Conversions</label>
+                <h4 class="serif">10</h4>
+              </div>
+            </div>
+            <div class="margin-sm"></div>
+            <h4>End Terms</h4>
+            <p class="muted">
+              This offer will end 1/1/2016 or when $450.00 rebates are paid.
+            </p>
           </div>
         </div>
       </div>
