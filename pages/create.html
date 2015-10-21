@@ -1,0 +1,242 @@
+{% extends "authenticated.html" %}
+
+{% block body %}
+<!--
+  If page-heading contains no buttons and is being used just for its h1 add the class .u-desktop-only
+-->
+<section class="page-heading">
+  <div class="container">
+    <h1>Create Rebate</h1>
+    <section class="actions">
+      <a href="javascript:void(0);" class="button">Cancel</a>
+      <a href="javascript:void(0);" class="button button-primary"><i class="typcn typcn-plus"></i> Create</a>
+    </section>
+  </div>
+</section>
+
+<div class="container">
+  
+  <div class="row margin-md">
+    <div class="col-xs-12 col-sm-4 col-md-2">
+      <!-- just add .anchor-link to elements you want to be anchors, jquery will construct the menu -->
+      <ul id="anchorMenu"></ul>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <label>
+            Offer Name
+            <span class="tool-tip">
+              <section>
+                A name for this offer.
+              </section>
+            </span>
+          </label>
+          <input type="text">
+        </div>
+      </div>
+      <h3 class="anchor-link">Choose Rebate</h3>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <label>Offer Type
+            <span class="tool-tip">
+              <section>
+                Choose what type of reward the user can receive.
+              </section>
+            </span>
+          </label>
+          <select>
+            <option value="1">% of Purchase Back</option>
+            <option value="2">Fixed $ Ammount</option>
+          </select>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">  
+              <label>Rebate Ammount
+                <span class="tool-tip">
+                  <section>
+                    Choose how much the user can be rewarded.
+                  </section>
+                </span>
+              </label>
+              <div class="u-suffix percent">
+                <input type="number" placeholder="15">
+              </div>
+              <!-- 
+              USE THIS IF DOLLAR AMMOUnT IS SELECTED ABOVE
+              <div class="u-prefix dollar">
+                <input type="number" placeholder="0.00">
+              </div>
+              -->
+            </div>
+            <div class="col-xs-12 col-sm-6">  
+              <label>Minimum Purchase
+                <span class="tool-tip">
+                  <section>
+                    Define how much the user has to spend to be eligable 
+                  </section>
+                </span>
+              </label>
+              <div class="u-prefix dollar">
+                <input type="number" placeholder="0.00">
+              </div>
+            </div>
+          </div>
+          <label>Custom Message</label>
+          <textarea></textarea>
+          <label>Select Theme
+            <span class="tool-tip">
+              <section>
+                Choose a theme that fits your website best.
+              </section>
+            </span>
+          </label>
+          <select>
+            <option data-display="Default Theme">Default Theme</option>
+            <option value="1">Classic Serif</option>
+            <option value="2">Material</option>
+            <option value="3">Corporate</option>
+          </select>
+          <a href="javascript:void(0);" class="text-link">Create your own with Premium.</a>
+          <br><br>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          Preview goes here.
+        </div>
+      </div>
+      <h3 class="anchor-link">Design Ad</h3>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="row l-social-title">
+            <div class="col-xs-8">
+              <h3 class="l-so"><i class="typcn typcn-social-facebook"></i> Facebook</h3>
+            </div>
+            <div class="col-xs-4">
+              <div class="u-pull-right">
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="facebook-switch">
+                  <label class="onoffswitch-label" for="facebook-switch"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label>Post Body</label>
+          <textarea></textarea>
+          <div class="row">
+            <div class="col-xs-6">
+              <label>Post URL
+                <span class="tool-tip">
+                  <section>
+                    Decide where the facebook post links to.
+                  </section>
+                </span>
+              </label>
+              <input type="text">
+            </div>
+            <div class="col-xs-6">
+              <input type="submit" value="Upload Photo" class="button-primary u-no-label u-block">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          Facebook post preview goes here.
+        </div>
+      </div>
+      <div class="row margin-sm">
+        <div class="col-xs-12 col-md-6">
+          <div class="row l-social-title">
+            <div class="col-xs-8">
+              <h3 class="l-so"><i class="typcn typcn-social-twitter"></i> Twitter</h3>
+            </div>
+            <div class="col-xs-4">
+              <div class="u-pull-right">
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="twitter-switch">
+                  <label class="onoffswitch-label" for="twitter-switch"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label>Tweet Body</label>
+          <textarea></textarea>
+          <label>Tweet link URL
+            <span class="tool-tip">
+              <section>
+                Decide what the tweet links to.
+              </section>
+            </span>
+          </label>
+          <input type="text">
+        </div>
+        <div class="col-xs-12 col-md-6">
+          Tweet example goes here.
+        </div>
+      </div>
+      <h3 class="anchor-link">Set Terms</h3>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <label>Rebate Limit
+            <span class="tool-tip">
+              <section>
+                How many rebates would you like to give?
+              </section>
+            </span>
+          </label>
+          <div class="row">
+            <div class="col-xs-2 col-md-3">
+              <input type="number">
+            </div>
+            <div class="col-xs-10 col-md-9">
+              <input type="range">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <label>Set End Date</label>
+          <div class="row u-date-row">
+            <div class="col-xs-4">
+              <input type="number" placeholder="mm">
+            </div>
+            <div class="col-xs-4">
+              <input type="number" placeholder="dd">
+            </div>
+            <div class="col-xs-4">
+              <input type="number" placeholder="yyyy">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <label>
+            Conversion Reward
+          </label>
+          <div class="row">
+            <div class="col-xs-12">
+              <select>
+                <option data-display="Select Reward">No Reward</option>
+                <option value="1">10% off Purchase</option>
+                <option value="2">25% off Purchase</option>
+                <option value="3">Add Conversion Reward</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="anchor-link">Publish</h3>
+    </div>
+  </div>
+</div>
+
+<!-- FOR DEMO ONLY DO NOT COPY TO PROJECT -->
+
+<script type="text/javascript">
+  window.onload = function() {
+    $('.demo-notifications').click(function() {
+      $('#toggleNotifications').toggleClass('has-notifications');
+    });
+  };
+</script>
+
+<!-- /FOR DEMO ONLY DO NOT COPY TO PROJECT -->
+
+{% endblock %}
