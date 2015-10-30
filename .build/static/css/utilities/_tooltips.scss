@@ -39,8 +39,9 @@
 		padding: 12px;
 		font-weight: normal;
 		font-size: 12px;
-		max-width: 320px;
 		z-index: 9002;
+		white-space: normal;
+		width: 320px;
 	}
 	&:hover {
 		&:before {

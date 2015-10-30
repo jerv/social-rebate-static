@@ -16,96 +16,199 @@
 
 <div class="container">
   
-  <div class="row margin-md">
+  <div class="row margin-sm">
     <div class="col-xs-12 col-sm-4 col-md-2">
       <!-- just add .anchor-link to elements you want to be anchors, jquery will construct the menu -->
       <ul id="anchorMenu"></ul>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-10">
+      <div class="margin-sm"></div>
+      <h3 class="anchor-link">Rebate Options</h3>
+      <h5>
+        Create the rebate your customers can earn.
+      </h5>
+      <div class="margin-sm"></div>
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-12 col-md-5"> 
           <label>
             Offer Name
             <span class="tool-tip">
               <section>
-                A name for this offer.
+                A name for this offer. For your own reference. It can be anything.
               </section>
             </span>
           </label>
           <input type="text">
         </div>
       </div>
-      <h3 class="anchor-link">Choose Rebate</h3>
       <div class="row">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-5"> 
+          <h4>Choose Offer</h4>
           <label>Offer Type
             <span class="tool-tip">
               <section>
-                Choose what type of reward the user can receive.
+                Choose what type of reward your customer can earn.
               </section>
             </span>
           </label>
-          <select>
-            <option value="1">% of Purchase Back</option>
-            <option value="2">Fixed $ Ammount</option>
-          </select>
-          <div class="row">
-            <div class="col-xs-12 col-sm-6">  
-              <label>Rebate Ammount
-                <span class="tool-tip">
-                  <section>
-                    Choose how much the user can be rewarded.
-                  </section>
-                </span>
-              </label>
-              <div class="u-suffix percent">
-                <input type="number" placeholder="15">
-              </div>
-              <!-- 
-              USE THIS IF DOLLAR AMMOUnT IS SELECTED ABOVE
-              <div class="u-prefix dollar">
-                <input type="number" placeholder="0.00">
-              </div>
-              -->
+          <div class="u-two-switch clearfix ezt-nav-radio" ezt="rebate-type">
+            <div class="col">
+              <input type="radio" checked name="two-switch" id="percent">
+              <label for="percent">% of Purchase Back</label>
             </div>
-            <div class="col-xs-12 col-sm-6">  
-              <label>Minimum Purchase
-                <span class="tool-tip">
-                  <section>
-                    Define how much the user has to spend to be eligable 
-                  </section>
-                </span>
-              </label>
+            <div class="col">
+              <input type="radio" name="two-switch" id="fixed-ammount">
+              <label for="fixed-ammount">Fixed $ Ammount</label>
+            </div>
+          </div>
+          <label>Rebate Ammount
+            <span class="tool-tip">
+              <section>
+                Choose what ammount back your customer can earn.
+              </section>
+            </span>
+          </label>
+          <div ezt="rebate-type" class="ezt-container">
+            <div class="ezt-content ezt-active">
+              <div class="percentages clearfix">
+                <div class="col">
+                  <input type="radio" checked name="percentages" id="percentages-5">
+                  <label for="percentages-5">5%</label>
+                </div>
+                <div class="col">
+                  <input type="radio" name="percentages" id="percentages-10">
+                  <label for="percentages-10">10%</label>
+                </div>
+                <div class="col">
+                  <input type="radio" name="percentages" id="percentages-15">
+                  <label for="percentages-15">15%</label>
+                </div>
+                <div class="col">
+                  <input type="radio" name="percentages" id="percentages-20">
+                  <label for="percentages-20">20%</label>
+                </div>
+                <div class="col">
+                  <input type="radio" name="percentages" id="percentages-25">
+                  <label for="percentages-25">25%</label>
+                </div>
+                <div class="col">
+                  <input type="radio" name="percentages" id="percentages-50">
+                  <label for="percentages-50">50%</label>
+                </div>
+              </div>
+            </div>
+            <div class="ezt-content">
               <div class="u-prefix dollar">
                 <input type="number" placeholder="0.00">
               </div>
             </div>
           </div>
-          <label>Custom Message</label>
-          <textarea></textarea>
-          <label>Select Theme
-            <span class="tool-tip">
-              <section>
-                Choose a theme that fits your website best.
-              </section>
-            </span>
-          </label>
-          <select>
-            <option data-display="Default Theme">Default Theme</option>
-            <option value="1">Classic Serif</option>
-            <option value="2">Material</option>
-            <option value="3">Corporate</option>
-          </select>
-          <a href="javascript:void(0);" class="text-link">Create your own with Premium.</a>
-          <br><br>
+          <a href="javascript:void(0);" class="text-link u-advanced-link">Rebate Requirements</a>
+          <div class="u-advanced-content">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">  
+                <label>Min Purchase
+                  <span class="tool-tip">
+                    <section>
+                      Define how much the user has to spend to be eligable 
+                    </section>
+                  </span>
+                </label>
+                <div class="u-prefix dollar">
+                  <input type="number" placeholder="0.00">
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">  
+                <label>Max Purchase
+                  <span class="tool-tip">
+                    <section>
+                      The most a user can spend and stil be eligable 
+                    </section>
+                  </span>
+                </label>
+                <div class="u-prefix dollar">
+                  <input type="number" placeholder="0.00">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">  
+                <label>Required Clicks
+                  <span class="tool-tip">
+                    <section>
+                      Define how much clicks the customer must generate to receive a reward.
+                    </section>
+                  </span>
+                </label>
+                <input type="number">
+              </div>
+              <div class="col-xs-12 col-sm-6">  
+                <label>Time Limit
+                  <span class="tool-tip">
+                    <section>
+                      How long does the customer have to earn rewards.
+                    </section>
+                  </span>
+                </label>
+                <input type="number">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-xs-12 col-md-6">
-          Preview goes here.
+        <div class="col-xs-12 col-md-5">
         </div>
       </div>
-      <h3 class="anchor-link">Design Ad</h3>
+      <div class="margin-md"></div>
+      <h3 class="anchor-link">Disign Offer</h3>
+      <h5>
+        Design the popup eligable customers will see.
+      </h5>
+      <div class="margin-sm"></div>
       <div class="row">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-5"> 
+          <label>Custom your offer</label>
+          <textarea placeholder="Thank you for your purchase. You can earn cash back on this purchase by sharing below."></textarea>
+          <label>Offer Image</label>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <input type="submit" value="Upload Photo" class="button-primary u-block">
+            </div>
+          </div>
+          <a href="javascript:void(0);" class="text-link">Create your own with Premium.</a>
+        </div>
+        <div class="col-xs-12 col-md-7">
+          <h4>Ad Preview:</h4>
+          <article class="theme-default">
+            <div class="theme-row clearfix">
+              <img src="{% static 'images/rei.png' %}" class="store">
+              <section class="offer-header">
+                <h4>Earn up to<span>10%</span>Cash Back </h4>
+                <h3>On This Purchase.</h3>
+              </section>
+            </div>
+            <p class="main-offer">
+              <span class="from-label">From REI</span>
+              Thank you for your purchase. You can earn cash back on this purchase by sharing below.
+            </p>
+            <h4>Earn up to 10% Cash Back on This Purchase</h4>
+            <p>Just for sharing on...</p>
+            <ul class="social-list">
+              <li><img src="{% static 'images/social-icons/facebook.png' %}"></li>
+              <li><img src="{% static 'images/social-icons/twitter.png' %}"></li>
+              <li><img src="{% static 'images/social-icons/plus.png' %}"></li>
+            </ul>
+            <a href="#" class="offer-button">Claim Offer</a>
+            <a href="#" class="no-button">No Thanks</a>
+          </article>
+        </div>
+      </div>
+      <h3 class="anchor-link">Social Settings</h3>
+      <h5>
+        Create the ads you want your customers to share.
+      </h5>
+      <div class="margin-sm"></div>
+      <div class="row">
+        <div class="col-xs-12 col-md-5">
           <div class="row l-social-title">
             <div class="col-xs-8">
               <h3 class="l-so"><i class="typcn typcn-social-facebook"></i> Facebook</h3>
@@ -113,36 +216,42 @@
             <div class="col-xs-4">
               <div class="u-pull-right">
                 <div class="onoffswitch">
-                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="facebook-switch">
-                  <label class="onoffswitch-label" for="facebook-switch"></label>
+                  <input type="checkbox" checked name="onoffswitch" class="onoffswitch-checkbox" id="facebook-switch">
+                  <label class="onoffswitch-label u-social-toggle" social-target="facebook" for="facebook-switch"></label>
                 </div>
               </div>
             </div>
           </div>
-          <label>Post Body</label>
-          <textarea></textarea>
-          <div class="row">
-            <div class="col-xs-6">
-              <label>Post URL
-                <span class="tool-tip">
-                  <section>
-                    Decide where the facebook post links to.
-                  </section>
-                </span>
-              </label>
-              <input type="text">
-            </div>
-            <div class="col-xs-6">
-              <input type="submit" value="Upload Photo" class="button-primary u-no-label u-block">
+        </div>
+      </div>
+      <div class="u-toggleable show" social-target="facebook">
+        <div class="row">
+          <div class="col-xs-12 col-md-5">
+            <label>Post Body</label>
+            <textarea></textarea>
+            <div class="row">
+              <div class="col-xs-6">
+                <label>Post URL
+                  <span class="tool-tip">
+                    <section>
+                      Decide where the facebook post links to.
+                    </section>
+                  </span>
+                </label>
+                <input type="text">
+              </div>
+              <div class="col-xs-6">
+                <input type="submit" value="Upload Photo" class="button-primary u-no-label u-block">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-md-6">
-          Facebook post preview goes here.
+          <div class="col-xs-12 col-md-7">
+            Facebook post preview goes here.
+          </div>
         </div>
       </div>
       <div class="row margin-sm">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-5">
           <div class="row l-social-title">
             <div class="col-xs-8">
               <h3 class="l-so"><i class="typcn typcn-social-twitter"></i> Twitter</h3>
@@ -151,29 +260,39 @@
               <div class="u-pull-right">
                 <div class="onoffswitch">
                   <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="twitter-switch">
-                  <label class="onoffswitch-label" for="twitter-switch"></label>
+                  <label class="onoffswitch-label u-social-toggle" social-target="twitter" for="twitter-switch"></label>
                 </div>
               </div>
             </div>
           </div>
-          <label>Tweet Body</label>
-          <textarea></textarea>
-          <label>Tweet link URL
-            <span class="tool-tip">
-              <section>
-                Decide what the tweet links to.
-              </section>
-            </span>
-          </label>
-          <input type="text">
-        </div>
-        <div class="col-xs-12 col-md-6">
-          Tweet example goes here.
         </div>
       </div>
-      <h3 class="anchor-link">Set Terms</h3>
+      <div class="u-toggleable" social-target="twitter">
+        <div class="row">
+          <div class="col-xs-12 col-md-5">
+            <label>Tweet Body</label>
+            <textarea></textarea>
+            <label>Tweet link URL
+              <span class="tool-tip">
+                <section>
+                  Decide what the tweet links to.
+                </section>
+              </span>
+            </label>
+            <input type="text">
+          </div>
+          <div class="col-xs-12 col-md-7">
+            Tweet example goes here.
+          </div>
+        </div>
+      </div>
+      <h3 class="anchor-link">Budget</h3>
+      <h5>
+        Set financial limits for this rebate.
+      </h5>
+      <div class="margin-sm"></div>
       <div class="row">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-5">
           <label>Rebate Limit
             <span class="tool-tip">
               <section>
@@ -181,14 +300,7 @@
               </section>
             </span>
           </label>
-          <div class="row">
-            <div class="col-xs-2 col-md-3">
-              <input type="number" value="25">
-            </div>
-            <div class="col-xs-10 col-md-9">
-              <input type="range" value="25">
-            </div>
-          </div>
+          <input type="number" value="25">
           <label>Set End Date</label>
           <div class="row u-date-row">
             <div class="col-xs-4">
@@ -210,12 +322,8 @@
             <option value="2">25% off Purchase</option>
             <option value="3">Add Conversion Reward</option>
           </select>
-          <label>Min Conversions Required</label>
-          <input type="number">
-          <label>Min Clicks Required</label>
-          <input type="number">
         </div>
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-md-7">
           <div class="u-card">
             <h4>Results</h4>
             <div class="row">
@@ -248,7 +356,6 @@
           </div>
         </div>
       </div>
-      <h3 class="anchor-link">Publish</h3>
     </div>
   </div>
 </div>
