@@ -3239,7 +3239,7 @@ footer {
       font-weight: bold;
       letter-spacing: 0.05em; }
   .campaign.campaign-complete:hover .campaign-cta {
-    background-color: #DB5461;
+    background-color: #8AA29E;
     color: #fff; }
   .campaign.campaign-new {
     height: 262px;
@@ -3253,7 +3253,8 @@ footer {
       font-size: 50px;
       margin: 0 0 10px 0;
       transition: color 0.2s ease-out;
-      line-height: 1; }
+      line-height: 1;
+      color: #8AA29E; }
     .campaign.campaign-new p {
       text-transform: uppercase;
       font-size: 14px;
