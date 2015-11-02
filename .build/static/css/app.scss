@@ -14,8 +14,9 @@ html { height: 100%; }
 body {
   font-family: 'Roboto', sans-serif;
   height: 100%;
+  margin-top: $nav-size;
   &.no-fixed-nav {
-    margin-top:0;
+    margin-top: 0 ;
   }
 }
 
@@ -112,6 +113,28 @@ p {
   }
 }
 
+.u-progress-bar {
+  display: block;
+  position: relative;
+  background-color: #eee;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.2) inset;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 3px;
+  & > div {
+    display: block;
+    height: 100%;
+    width: 25%; //example number default should be zero;
+    background-color: $primary;
+  }
+}
+
+.u-link-text {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
 .u-card {
   @extend .u-well;
   background-color: #fff;
@@ -158,6 +181,27 @@ p {
 
 .u-txt-align-left {
   text-align: left;
+}
+
+.u-ribbon {
+  display: block;
+  background-color: $primary;
+  color: #fff;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  a {
+    color: #fff;
+  }
+  i {
+    font-size: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .u-suffix {
@@ -260,6 +304,13 @@ p {
   }
   .u-mobile-only {
     display: block !important;
+  }
+}
+
+@media (max-width:767px) {
+  .u-mobile-center {
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -552,6 +603,11 @@ legend {
   display: block;
   position: relative;
   white-space: nowrap;
+  &.u-wrap {
+    white-space: normal;
+    text-overflow: initial;
+    overflow: visible;
+  }
 }
 
 fieldset {

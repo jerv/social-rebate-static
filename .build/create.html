@@ -246,9 +246,9 @@
       <div class="margin-md"></div>
       <h3 class="anchor-link">Disign Offer</h3>
       <h5>
-        Design the popup eligable customers will see.
+        Design the offer eligable customers will see.
       </h5>
-      <div class="margin-sm"></div>
+      <div class="margin-md"></div>
       <div class="row">
         <div class="col-xs-12 col-md-5"> 
           <label>Custom your offer</label>
@@ -259,7 +259,23 @@
               <input type="submit" value="Upload Photo" class="button-primary u-block">
             </div>
           </div>
-          <a href="javascript:void(0);" class="text-link">Create your own with Premium.</a>
+          <div class="row padding-xs">
+            <div class="col-xs-12">
+              <label>Select Theme</label>
+              <div class="selector-slick">
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+              </div>
+              <span class="u-link-text">Customize and Create your own.</span> <a href="javascript:void(0);" class="text-link"> Get Premium.</a>
+            </div>
+          </div>
         </div>
         <div class="col-xs-12 col-md-7">
           <h4>Ad Preview:</h4>
@@ -287,39 +303,46 @@
           </article>
         </div>
       </div>
+      <div class="margin-md"></div>
       <h3 class="anchor-link">Social Settings</h3>
       <h5>
         Create the ads you want your customers to share.
       </h5>
       <div class="margin-sm"></div>
-      <div class="row">
-        <div class="col-xs-12 col-md-5">
-          <div class="row l-social-title">
-            <div class="col-xs-8">
-              <h3 class="l-so"><i class="typcn typcn-social-facebook"></i> Facebook</h3>
-            </div>
-            <div class="col-xs-4">
-              <div class="u-pull-right">
-                <div class="onoffswitch">
-                  <input type="checkbox" checked name="onoffswitch" class="onoffswitch-checkbox" id="facebook-switch">
-                  <label class="onoffswitch-label u-social-toggle" social-target="facebook" for="facebook-switch"></label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="u-toggleable show" social-target="facebook">
+      <div>
         <div class="row">
           <div class="col-xs-12 col-md-5">
+            <label>Post type</label>
+              <div class="selector-slick">
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+                <div><img src="http://placehold.it/320x240"></div>
+              </div>
+            <label>Post Title</label>
+            <input type="text">
             <label>Post Body</label>
             <textarea></textarea>
+            <label>
+              Attach Coupon
+            </label>
+            <select>
+              <option data-display="Select Coupon">None</option>
+              <option value="1">10% off Purchase</option>
+              <option value="2">25% off Purchase</option>
+              <option value="3">Create New Coupon</option>
+            </select>
             <div class="row">
               <div class="col-xs-6">
                 <label>Post URL
                   <span class="tool-tip">
                     <section>
-                      Decide where the facebook post links to.
+                      Decide where the post links to.
                     </section>
                   </span>
                 </label>
@@ -335,42 +358,7 @@
           </div>
         </div>
       </div>
-      <div class="row margin-sm">
-        <div class="col-xs-12 col-md-5">
-          <div class="row l-social-title">
-            <div class="col-xs-8">
-              <h3 class="l-so"><i class="typcn typcn-social-twitter"></i> Twitter</h3>
-            </div>
-            <div class="col-xs-4">
-              <div class="u-pull-right">
-                <div class="onoffswitch">
-                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="twitter-switch">
-                  <label class="onoffswitch-label u-social-toggle" social-target="twitter" for="twitter-switch"></label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="u-toggleable" social-target="twitter">
-        <div class="row">
-          <div class="col-xs-12 col-md-5">
-            <label>Tweet Body</label>
-            <textarea></textarea>
-            <label>Tweet link URL
-              <span class="tool-tip">
-                <section>
-                  Decide what the tweet links to.
-                </section>
-              </span>
-            </label>
-            <input type="text">
-          </div>
-          <div class="col-xs-12 col-md-7">
-            Tweet example goes here.
-          </div>
-        </div>
-      </div>
+      <div class="margin-md"></div>
       <h3 class="anchor-link">Budget</h3>
       <h5>
         Set financial limits for this rebate.
@@ -398,39 +386,30 @@
               <input type="number" placeholder="yyyy">
             </div>
           </div>
-          <label>
-            Conversion Reward
-          </label>
-          <select>
-            <option data-display="Select Reward">No Reward</option>
-            <option value="1">10% off Purchase</option>
-            <option value="2">25% off Purchase</option>
-            <option value="3">Add Conversion Reward</option>
-          </select>
         </div>
         <div class="col-xs-12 col-md-7">
           <div class="u-card">
             <h4>Results</h4>
             <div class="row">
-              <div class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-sm-6 col-md-4">
                 <label>Max Rebates</label>
-                <h4 class="serif">25</h4>
+                <h2>25</h2>
               </div>
-              <div class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-sm-6 col-md-4">
                 <label>Estimated Rebates Paid</label>
-                <h4 class="serif">$450.00</h4>
+                <h2>$450.00</h2>
               </div>
             </div>
             <div class="margin-sm"></div>
             <h4>Estimates</h4>
             <div class="row">
-              <div class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-sm-6 col-md-4">
                 <label>Estimated Clicks</label>
-                <h4 class="serif">125</h4>
+                <h2>125</h2>
               </div>
-              <div class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-sm-6 col-md-4">
                 <label>Estimated Conversions</label>
-                <h4 class="serif">10</h4>
+                <h2>10</h2>
               </div>
             </div>
             <div class="margin-sm"></div>
@@ -444,18 +423,6 @@
     </div>
   </div>
 </div>
-
-<!-- FOR DEMO ONLY DO NOT COPY TO PROJECT -->
-
-<script type="text/javascript">
-  window.onload = function() {
-    $('.demo-notifications').click(function() {
-      $('#toggleNotifications').toggleClass('has-notifications');
-    });
-  };
-</script>
-
-<!-- /FOR DEMO ONLY DO NOT COPY TO PROJECT -->
 
 
   </section>
@@ -476,9 +443,30 @@
   <script src="/static/js/vendor/perfect-scrollbar.jquery.js"></script>
   <script src="/static/js/vendor/jquery.nice-select.min.js"></script>
   <script src="/static/js/nav.js"></script>
-  <script src="/static/js/anchor.js"></script>
   <script src="/static/js/main.js"></script>
 </body>
- 
+
+
+<script src="/static/js/anchor.js"></script>
+<script src="/static/js/vendor/slick.js"></script>
+
+<script type="text/javascript">
+  window.onload = function() {
+    $('.selector-slick').slick({
+      autoplay: false,
+      mobileFirst: true,
+      infinite: true,
+      slidesToShow: 3,
+      centerPadding: 0,
+      centerMode: true,
+      slidesToScroll: 3,
+      focusOnSelect: true,
+      prevArrow: '<i class="typcn typcn-chevron-left"></i>',
+      nextArrow: '<i class="typcn typcn-chevron-right"></i>'
+    });
+  };
+</script>
+
+
 
 </html>

@@ -41,13 +41,13 @@ $(document).ready(function() {
     $(this).next().toggleClass('open');
   });
 
-  $(socialLink).click(function() {
-    var socialTarget = $(this).attr("social-target");
-    var ezTargetSelector = '[social-target="' + socialTarget + '"] ';
-    console.log('casul');
-    //update content
-    $(ezTargetSelector).toggleClass('show');   
-  });
+  // $(socialLink).click(function() {
+  //   var socialTarget = $(this).attr("social-target");
+  //   var ezTargetSelector = '[social-target="' + socialTarget + '"] ';
+  //   console.log('casul');
+  //   //update content
+  //   $(ezTargetSelector).toggleClass('show');   
+  // });
 
   // initialize selects
   $(document).ready(function() {

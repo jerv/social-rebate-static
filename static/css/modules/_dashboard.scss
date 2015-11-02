@@ -1,0 +1,85 @@
+.campaign {
+	margin-bottom: 25px;
+	position: relative;
+	overflow: hidden;
+	color: #333;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+	text-align: center;
+	max-width: 260px;
+	margin: 0 auto;
+	display: block;
+	padding: 10px;
+	&:hover {
+		color: #333;
+		box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+	}
+	label {
+		color: #777;
+		cursor: pointer;
+		margin-bottom: 5px;
+	}
+	h4 {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		&.title {
+			padding:0 0 15px 0;
+			border-bottom: 1px solid #eee;
+		}
+	}
+	&.campaign-complete {
+		padding-bottom: 60px;
+		.campaign-cta {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			line-height: 45px;
+			color: #333;
+			background-color: #eee;
+			text-align: center;
+			transition: background-color 0.1s ease-out;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: bold;
+			letter-spacing: 0.05em;
+		}
+	}
+	&.campaign-complete:hover .campaign-cta {
+		background-color: $primary;
+		color: #fff;
+	}
+	&.campaign-new {
+		height: 262px;
+		display: table;
+		width: 100%;
+		text-align: center;
+		& > div {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		i {
+			font-size: 50px;
+			margin: 0 0 10px 0;
+			transition: color 0.2s ease-out;
+			line-height: 1;
+		}
+		p {
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: bold;
+			color: #777;
+		}
+		&:hover {
+			p {
+				color: #333;
+			}
+			i {
+				color: $primary;
+			}
+		}
+	}
+}

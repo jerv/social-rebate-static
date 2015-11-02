@@ -1,0 +1,106 @@
+{% extends "authenticated.html" %}
+
+{% block body %}
+
+<div class="u-ribbon">
+	<div class="container">
+		<a href="javascript:void(0)">EXAMPLE RIBBON ALERT. This ribbon can be used to alert users of updates.</a><i class="typcn typcn-times"></i>
+	</div>
+</div>
+
+<div class="container">
+	<div class="margin-md">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3 class="u-mobile-center">Welcome back Adam.</h3>
+			</div>
+		</div>
+		<div class="row u-mobile-center">
+			<div class="col-xs-12 col-sm-6">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<label>new clicks this week</label>
+						<h2>124</h2>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<label>new sales this week</label>
+						<h2>5</h2>
+					</div>
+				</div>
+				<div class="margin-sm"></div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<label>rebates paid this week</label>
+						<h2>$301.75</h2>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<label>rebates claimed this week</label>
+						<h2>17</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+			</div>
+		</div>
+		<div class="margin-md"></div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h4 class="u-mobile-center">Active Rebate Campaigns</h4>
+			</div>
+		</div>
+		<div class="row margin-xs">
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<a href="javascript:void(0)" class="u-card campaign campaign-complete">
+					<h4 class="title">Campaign Title</h4>
+					<div class="row">
+						<div class="col-xs-6">
+							<label class="u-wrap">Clicks</label>
+							<h4>112</h4>
+						</div>
+						<div class="col-xs-6">
+							<label class="u-wrap">Claims</label>
+							<h4>11</h4>
+						</div>
+					</div>
+					<label>Budget</label>
+					<h4>$124.00/$600.00</h4>
+					<div class="u-progress-bar">
+						<div>&nbsp;</div>
+					</div>
+					<div class="campaign-cta">Campaign Details</div>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<a href="javascript:void(0)" class="u-card campaign campaign-complete">
+					<h4 class="title">Campaign Title</h4>
+					<div class="row">
+						<div class="col-xs-6">
+							<label class="u-wrap">Clicks</label>
+							<h4>112</h4>
+						</div>
+						<div class="col-xs-6">
+							<label class="u-wrap">Claims</label>
+							<h4>11</h4>
+						</div>
+					</div>
+					<label>Budget</label>
+					<h4>$124.00/$600.00</h4>
+					<div class="u-progress-bar">
+						<div>&nbsp;</div>
+					</div>
+					<div class="campaign-cta">Campaign Details</div>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<a href="javascript:void(0)" class="u-card campaign campaign-new">
+					<div class="center">
+						<i class="typcn typcn-plus-outline"></i>
+						<p>Create New Campaign</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
