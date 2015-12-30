@@ -53,4 +53,10 @@ $(document).ready(function() {
   $(document).ready(function() {
     $('select').niceSelect();
   });
+
+  var extraCampaigns = $('.with-more');
+
+  $(extraCampaigns).click(function() {
+    $(this).toggleClass('open');
+  });
 });

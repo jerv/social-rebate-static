@@ -100,6 +100,38 @@ p {
   }
 }
 
+.u-divider {
+  background-color: #ccc;
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+
+.u-tri-info {
+  padding: 12px 0;
+  font-size: 12px;
+  .col {
+    float: left;
+    display: inline-block;
+    width: 33.2%;
+  }
+  span {
+    color: $primary;
+    font-weight: bold;
+    font-size: 22px;
+    display: block;
+    font-size: 16px;
+  }
+  @media (min-width:767px) {
+    text-align: left;
+  }
+}
+
+.u-no-row-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .u-well {
   display: block;
   padding: 8px;
@@ -110,6 +142,18 @@ p {
   margin-bottom: 15px;
   @media (min-width:640px) {
     padding: 15px;
+  }
+}
+
+.u-subheading {
+  p {
+    color: #777;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 }
 
