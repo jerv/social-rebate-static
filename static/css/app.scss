@@ -101,19 +101,78 @@ p {
 }
 
 .u-divider {
-  background-color: #ccc;
+  background-color: #ddd;
   display: block;
   height: 1px;
   width: 100%;
 }
 
+.u-notification {
+  display: block;
+  background-color: #fff;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  margin:0 0 10px 0;
+  padding: 10px;
+  position: relative;
+  overflow:hidden;
+  transition: 0.2s all linear;
+  &:hover {
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    h5 {
+      color: #333;
+    }
+  }
+  &:active {
+    box-shadow:0 1px 2px rgba(0,0,0,0.1);
+    background-color: #fafafa;
+    h5 {
+      color: $primary;
+    }
+  }
+  h5 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin:0 0 5px 0;
+    color: #777;
+    font-family: "Roboto", sans-serif;
+    i {
+      color: $primary;
+      font-size: 16px;
+    }
+  }
+  &.general h5 i:before {
+    content:'\e091';  
+  }
+  &.critical h5 i:before {
+    content:'\e137';        
+  }
+  &.report h5 i:before {
+    content:'\e043';       
+  }
+  &.heart h5 i:before {
+    content:'\e085';       
+  }
+  p {
+    font-size: 12px;
+    color: #777;
+    margin:0;
+  }
+}
+
 .u-tri-info {
   padding: 12px 0;
   font-size: 12px;
+  &.large-digits {
+    span {
+      font-size: 28px;
+    }
+  }
   .col {
     float: left;
     display: inline-block;
-    width: 33.2%;
+    width: 33.33%;
   }
   span {
     color: $primary;
@@ -124,6 +183,34 @@ p {
   }
   @media (min-width:767px) {
     text-align: left;
+  }
+}
+
+.u-hex-info {
+  padding: 12px 0;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &.hex-left {
+    text-align: left;
+  }
+  .col {
+    float: left;
+    display: inline-block;
+    width: 33.33%;
+  }
+  span {
+    color: $secondary;
+    font-weight: bold;
+    font-size: 22px;
+    display: block;
+    font-size: 16px;
+  }
+  @media (min-width:767px) {
+    .col {
+      width: 16.66%;  
+    }
   }
 }
 
@@ -148,12 +235,16 @@ p {
 .u-subheading {
   p {
     color: #777;
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 20px;
   }
   h4 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+  &:first-of-type h4 {
+    margin-top: 0;
   }
 }
 
@@ -225,6 +316,10 @@ p {
 
 .u-txt-align-left {
   text-align: left;
+}
+
+.u-relative {
+  position: relative;
 }
 
 .u-ribbon {
