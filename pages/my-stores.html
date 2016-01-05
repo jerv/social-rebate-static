@@ -1,0 +1,53 @@
+{% extends "authenticated.html" %}
+
+{% block body %}
+
+<section class="page-heading u-desktop-only">
+  <div class="container">
+    <h1>My Stores</h1>
+    <section class="actions">
+      <a href="javascript:void(0);" class="button button-primary"><i class="typcn typcn-plus"></i> Add Store</a>
+    </section>
+  </div>
+</section>
+
+<div class="container">
+	<div class="margin-md">
+		<div class="margin-sm">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<section class="u-card l-store">
+						<div class="nice-select action-button">
+						  <span class="current">Actions</span>
+						  <ul class="list">
+						    <li class="option selected" data-display="Actions">Edit</li>
+						    <li class="option selected" data-display="Actions">View Report</li>						
+						  </ul>
+						</div>
+						<div class="table-container">
+							<img class="main-photo" src="http://placehold.it/320x320">
+							<div class="title">
+								<h4>Bens Store</h4>
+								<p>Shopify</p>
+							</div>
+						</div>
+						<div class="row body">
+							<div class="col-xs-12">
+								<div class="active-offer">
+									<label>Active Offer:</label>
+									<h4>
+										Get 100% cash back for 10 clicks. Lorem Ipsum orem. Isum Dolore officia reprehenderit.
+									</h4>
+								</div>
+								<p class="social-content">
+									Lorem ipsum Cupidatat elit sunt fugiat nisi ea quis labore non consectetur labore quis ad dolor deserunt. #hashtag #subject
+								</p>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+	</div>
+</div>
+
+{% endblock %}
